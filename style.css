@@ -59,7 +59,7 @@ body {
     height: 100%;
 }
 
-.main-content-references {
+.main-content-block {
     padding: 20px;
     display: block;
     width: 100%;
@@ -183,8 +183,7 @@ body {
 }
 
 .reference-container {
-    height: calc(100% - 122px);
-    display: flex;
+    overflow: visible !important;
 }
 
 .reference-icon-container {
@@ -201,7 +200,22 @@ body {
     width: 100%;
 }
 
-.references-carousel-container {
+.projects-carousel {
+    width: 100%;
+}
+
+.projects-carousel .slick-dots {
+    bottom: -25px !important;
+}
+
+.project {
+    height: 300px !important;
+    width: 400px !important;
+    text-align: center;
+    padding: 30px;
+}
+
+.content-container {
     display: flex;
     height: calc(100% - 172px);
     width: calc(80%);
@@ -209,6 +223,39 @@ body {
     align-items: center;
     margin-right: 10%;
     margin-left: 10%;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #ff5100, rgba(255, 102, 0, 0.0));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.project-show-more {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .slick-dots {
@@ -267,7 +314,6 @@ body {
     .about-me-image {
         display: none;
     }
-
 }
 
 @media (min-width: 993px) {
@@ -359,5 +405,29 @@ body {
 
     .references-fly-in-content.active {
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 1119px) {
+    .project-more-visible-first {
+        display: none;
+    }
+
+    .project-more-visible-second {
+        display: none;
+    }
+
+    .project-show-more {
+        display: flex;
+    }
+}
+
+@media (min-width: 1120px) and (max-width: 1660px) {
+    .project-more-visible-second {
+        display: none;
+    }
+
+    .project-show-more {
+        display: flex;
     }
 }
