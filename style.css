@@ -164,13 +164,23 @@ body {
     align-items: center;
 }
 
+.project-image-container {
+    width: 400px; height: 300px;
+}
+
+.project-image {
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}
+
 .about-me-info-container {
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.references-header {
+.block-header {
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
@@ -240,6 +250,7 @@ body {
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    border-radius: 30px;
 }
 
 .image-container {
@@ -328,83 +339,123 @@ body {
     /*Animations*/
     .home-fly-in-right {
         transform: translateY(150px);
-        transition: transform 1s ease-out;
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
     }
 
     .home-fly-in-right.active {
+        opacity: 1;
         transform: translateY(0);
     }
 
     .home-fly-in-left {
         transform: translateY(-150px);
-        transition: transform 1s ease-out;
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
     }
 
     .home-fly-in-left.active {
+        opacity: 1;
         transform: translateY(0);
     }
 
     .home-fly-in-title {
         transform: translateX(-100px);
-        transition: transform 1s ease-out;
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
     }
 
     .home-fly-in-title.active {
+        opacity: 1;
         transform: translateX(0);
     }
 
     .home-fly-in-description {
         transform: translateX(100px);
-        transition: transform 1s ease-out;
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
     }
 
     .home-fly-in-description.active {
+        opacity: 1;
         transform: translateX(0);
     }
 
     .about-me-fly-in-right {
         transform: translateX(-150px);
-        transition: transform 1s ease-out;
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
     }
 
     .about-me-fly-in-right.active {
+        opacity: 1;
         transform: translateX(0);
     }
 
     .about-me-fly-in-left {
         transform: translateX(150px);
-        transition: transform 1s ease-out;
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
     }
 
     .about-me-fly-in-left.active {
+        opacity: 1;
         transform: translateX(0);
     }
 
     .about-me-fly-in-title {
         transform: translateY(-150px) translateX(150px);
-        transition: transform 1s ease-out;
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
     }
 
     .about-me-fly-in-title.active {
+        opacity: 1;
         transform: translateY(0) translateX(0);
     }
 
     .references-fly-in-title {
         transform: translateY(-70px);
-        transition: transform 1s ease-out;
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
     }
 
     .references-fly-in-title.active {
+        opacity: 1;
         transform: translateY(0);
     }
 
     .references-fly-in-content {
         transform: translateY(100px);
-        transition: transform 1s ease-out;
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
     }
 
     .references-fly-in-content.active {
+        opacity: 1;
         transform: translateY(0);
+    }
+
+    .projects-fly-in-title {
+        transform: translateY(-70px);
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+
+    .projects-fly-in-title.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .projects-fly-in-content {
+        transform: translateY(100px);
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+
+    .projects-fly-in-content.active {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 

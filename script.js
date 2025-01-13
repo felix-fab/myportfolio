@@ -123,5 +123,8 @@ window.onload = function () {
 
     flyIn('.references-fly-in-title');
     flyIn('.references-fly-in-content');
+
+    flyIn('.projects-fly-in-title');
+    flyIn('.projects-fly-in-content');
 };
 
