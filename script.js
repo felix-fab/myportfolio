@@ -6,6 +6,8 @@ window.onload = function () {
     const delayBetweenTexts = 2000;
     const element = document.querySelector('.typewriter');
 
+    let projectShowMore = false;
+
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -85,31 +87,26 @@ window.onload = function () {
         });
     }
 
-    function openProjectCarousel() {
-        $('.projects-carousel').slick({
-            centerMode: true,
-            rows: 2, // Anzahl der Reihen
-            slidesPerRow: 3, // Slides pro Reihe
-            slidesToScroll: 1,
-            dots: true, // Punkte-Navigation
-            arrows: true, // Vorwärts-/Rückwärts-Buttons
-            responsive: [
-                {
-                    breakpoint: 1450,
-                    settings: {
-                        rows: 2, // Eine Reihe für kleinere Geräte
-                        slidesPerRow: 2 // Weniger Slides pro Reihe
-                    }
-                }
-            ]
+    function setProjectShowMoreEvent() {
+        $('#project-show-more').click(function () {
+            if (!projectShowMore) {
+                $('.projects-mobile-show-more').fadeIn(500);
+
+                $(this).text('Weniger anzeigen');
+            } else {
+                $('.projects-mobile-show-more').fadeOut(500);
+
+                $(this).text('Mehr anzeigen');
+            }
+
+            projectShowMore = !projectShowMore;
         });
     }
-
 
     typewriter();
 
     openReferencesCarousel();
-    openProjectCarousel();
+    setProjectShowMoreEvent();
 
     flyIn('.home-fly-in-right');
     flyIn('.home-fly-in-left');
