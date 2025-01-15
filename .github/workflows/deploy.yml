@@ -17,7 +17,7 @@ jobs:
     # Docker Build und Push
     - name: Build Docker image
       run: |
-        docker build -t ghcr.io/MyPortfolio/my-html-app:latest .
+        docker build -t ghcr.io/myportfolio/my-html-app:latest .
 
     - name: Log in to GitHub Container Registry
       uses: docker/login-action@v2
@@ -28,4 +28,4 @@ jobs:
 
     - name: Push Docker image to GitHub Container Registry
       run: |
-        docker push ghcr.io/MyPortfolio/my-html-app:latest
+        docker push ghcr.io/myportfolio/my-html-app:latest
