@@ -8,6 +8,7 @@ body {
     background-color: #494748;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .currentSelected {
@@ -84,6 +85,9 @@ body {
     color: white;
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    height: calc(100% - 317px- 3rem);
+    overflow: scroll;
 }
 
 .before-typewriter {
@@ -119,6 +123,7 @@ body {
 .portfolio {
     background-color: #ff5100;
     color: #494748;
+    color: #bfbfbf;
     border-radius: 1rem;
     font-weight: bold;
     font-size: 15px;
@@ -134,7 +139,7 @@ body {
 
 .portfolio:hover {
     background-color: #e64900;
-    color: #494748;
+    color: #7c7c7c;
 }
 
 .fa {
@@ -165,19 +170,24 @@ body {
 }
 
 .project-image-container {
-    width: 400px; height: 300px;
+    aspect-ratio: 16/9;
+    object-fit: contain;
 }
 
 .project-image {
     border-radius: 30px;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .about-me-info-container {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+.about-me-info-description {
+    height: calc(100% - 72px);
 }
 
 .block-header {
@@ -261,12 +271,11 @@ body {
     opacity: 1;
 }
 
-.project-show-more {
+.project-show-more-container {
     display: none;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 40px;
 }
 
 .slick-dots {
@@ -322,12 +331,20 @@ body {
         margin-top: 55px;
     }
 
+    .project-show-more-container {
+        display: flex;
+    }
+
+    .projects-mobile-show-more {
+        display: none;
+    }
+
     .about-me-image {
         display: none;
     }
 }
 
-@media (min-width: 993px) {
+@media (min-width: 993px) and (min-height: 690px) {
     .first-content {
         height: calc(100vh - 112px);
     }
@@ -456,29 +473,5 @@ body {
     .projects-fly-in-content.active {
         transform: translateY(0);
         opacity: 1;
-    }
-}
-
-@media (max-width: 1119px) {
-    .project-more-visible-first {
-        display: none;
-    }
-
-    .project-more-visible-second {
-        display: none;
-    }
-
-    .project-show-more {
-        display: flex;
-    }
-}
-
-@media (min-width: 1120px) and (max-width: 1660px) {
-    .project-more-visible-second {
-        display: none;
-    }
-
-    .project-show-more {
-        display: flex;
     }
 }

@@ -104,9 +104,9 @@
           <div class="col">
             <div class="about-me-info-container">
               <div class="about-me-fly-in-title header">Über <span style="color: #ff5100;">Mich</span></div>
-              <div class="about-me-fly-in-left">
+              <div class="about-me-info-description about-me-fly-in-left">
                 <div class="second-header">Artist & Designer!</div>
-                <div class="header-description" style="margin-top: 15px;">Ich bin ein engagierter Entwickler mit einer
+                <div class="header-description">Ich bin ein engagierter Entwickler mit einer
                   abgeschlossenen Ausbildung
                   und einer soliden beruflichen Erfahrung in der Welt der Webentwicklung. Während meiner bisherigen
                   Laufbahn habe ich an verschiedenen Projekten gearbeitet und dabei wertvolle Kenntnisse in der
@@ -228,19 +228,8 @@
       <div class="projects-fly-in-title block-header header">Letzte <span style="color: #ff5100;">Projekte</span></div>
       <div class="projects-fly-in-content content-container">
         <div class="container">
-          <div class="row">
-            <div class="col p-3">
-              <div class="project-image-container image-container">
-                <img src="https://www.marinegeophysik.ifg.uni-kiel.de/de/software/weisses-bild/image"
-                  class="project-image">
-                <div class="overlay">
-                  <h3>Brand Name</h3>
-                  <p>To view projects, click on the image</p>
-                  <a href="#" class="icon">🔗</a>
-                </div>
-              </div>
-            </div>
-            <div class="col p-3">
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
               <div class="project-image-container image-container">
                 <img
                   src="https://b2084911.smushcdn.com/2084911/wp-content/uploads/2022/08/app-konzeption-1030x687.jpg?lossy=0&strip=1&webp=1"
@@ -252,7 +241,7 @@
                 </div>
               </div>
             </div>
-            <div class="col p-3 project-more-visible-first">
+            <div class="col-12 col-md-6 col-lg-4">
               <div class="project-image-container image-container">
                 <img
                   src="https://b2084911.smushcdn.com/2084911/wp-content/uploads/2022/08/app-konzeption-1030x687.jpg?lossy=0&strip=1&webp=1"
@@ -264,14 +253,7 @@
                 </div>
               </div>
             </div>
-            <div class="col p-3 project-more-visible-first">
-              <div class="project-image-container image-container">
-                <img
-                  src="https://b2084911.smushcdn.com/2084911/wp-content/uploads/2022/08/app-konzeption-1030x687.jpg?lossy=0&strip=1&webp=1"
-                  class="project-image">
-              </div>
-            </div>
-            <div class="col p-3 project-more-visible-second">
+            <div class="col-12 col-md-6 col-lg-4">
               <div class="project-image-container image-container">
                 <img
                   src="https://b2084911.smushcdn.com/2084911/wp-content/uploads/2022/08/app-konzeption-1030x687.jpg?lossy=0&strip=1&webp=1"
@@ -283,7 +265,26 @@
                 </div>
               </div>
             </div>
-            <div class="col p-3 project-more-visible-second">
+            <div class="col-12 col-md-6 col-lg-4 projects-mobile-show-more">
+              <div class="project-image-container image-container">
+                <img
+                  src="https://b2084911.smushcdn.com/2084911/wp-content/uploads/2022/08/app-konzeption-1030x687.jpg?lossy=0&strip=1&webp=1"
+                  class="project-image">
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 projects-mobile-show-more">
+              <div class="project-image-container image-container">
+                <img
+                  src="https://b2084911.smushcdn.com/2084911/wp-content/uploads/2022/08/app-konzeption-1030x687.jpg?lossy=0&strip=1&webp=1"
+                  class="project-image">
+                <div class="overlay">
+                  <h3>Brand Name</h3>
+                  <p>To view projects, click on the image</p>
+                  <a href="#" class="icon">🔗</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 projects-mobile-show-more">
               <div class="project-image-container image-container">
                 <img
                   src="https://b2084911.smushcdn.com/2084911/wp-content/uploads/2022/08/app-konzeption-1030x687.jpg?lossy=0&strip=1&webp=1"
@@ -298,8 +299,8 @@
           </div>
         </div>
       </div>
-      <div class="project-show-more">
-        <button class="btn portfolio">Mehr anzeigen</button>
+      <div class="project-show-more-container">
+        <button id="project-show-more" class="btn portfolio">Mehr anzeigen</button>
       </div>
     </div>
   </div>
@@ -309,17 +310,40 @@
       <div class="block-header header">Kontaktiere <span style="color: #ff5100;">Mich</span></div>
       <div class="content-container">
         <form>
-          <label for="fname">Kompletter Name:</label>
-          <input type="text" id="fname" name="fname"><br><br>
-          <label for="lname">Email:</label>
-          <input type="text" id="lname" name="lname"><br><br>
-          <label for="lname">Handy nummer:</label>
-          <input type="tel" id="lname" name="lname"><br><br>
-          <label for="lname">Betreff:</label>
-          <input type="text" id="lname" name="lname"><br><br>
-          <label for="lname">Nachricht</label>
-          <input type="text" id="lname" name="lname"><br><br>
-          <input type="submit" value="Submit">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="firstName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Vorname">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="lastName" class="form-label">E-Mail Addresse</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Nachname">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="firstName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Vorname">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="lastName" class="form-label">E-Mail Addresse</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Nachname">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="largeTextbox" class="form-label">Große Textbox</label>
+              <textarea class="form-control" id="largeTextbox" rows="8" placeholder="Gib hier deinen Text ein..."
+                style="resize: none;"></textarea>
+            </div>
         </form>
       </div>
     </div>
