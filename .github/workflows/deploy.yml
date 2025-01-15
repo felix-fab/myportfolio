@@ -3,10 +3,10 @@ name: Build and Deploy Docker Image
 on:
   push:
     branches:
-      - main  # Trigger auf den Main-Branch. Du kannst dies auch auf andere Branches anpassen.
+      - main
 
 jobs:
-  build_and_deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,20 +27,3 @@ jobs:
     - name: Push Docker image
       run: |
         docker push ghcr.io/${{ github.repository }}:latest
-
-    - name: Pull the latest Docker image on the server (deployment server)
-      run: |
-        # Login to GitHub Container Registry again to pull the latest image
-        echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u ${{ secrets.GH_USERNAME }} --password-stdin
-
-        # Pull the latest image from the GitHub Container Registry
-        docker pull ghcr.io/${{ github.repository }}:latest
-
-    - name: Stop and remove the old container (if it exists)
-      run: |
-        docker stop myportfolio-container || true
-        docker rm myportfolio-container || true
-
-    - name: Run the new container with the latest image
-      run: |
-        docker run -d --name myportfolio-container -p 80:80 ghcr.io/${{ github.repository }}:latest
