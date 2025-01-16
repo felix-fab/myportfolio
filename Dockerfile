@@ -1,8 +1,16 @@
-# Basis-Image: Nginx
-FROM nginx:alpine
+# Dockerfile for Nginx with optional HTTPS support
 
-# Kopiere deine HTML-Dateien in das Nginx-Verzeichnis
+# Use the official Nginx image as a base
+FROM nginx:latest
+
+# Copy your HTML files into the container
 COPY ./html /usr/share/nginx/html
 
-# Port 80 ist der Standardport für HTTP
-EXPOSE 80
+# Copy custom Nginx configuration file
+COPY ./nginx.conf /etc/nginx/nginx.conf
+
+# Copy SSL files (optional for HTTPS)
+# COPY ./ssl /etc/nginx/ssl
+
+# Default command to start Nginx
+CMD ["nginx", "-g", "daemon off;"]
