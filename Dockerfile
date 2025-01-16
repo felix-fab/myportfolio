@@ -1,16 +1,20 @@
-# Dockerfile for Nginx with optional HTTPS support
-
-# Use the official Nginx image as a base
+# Verwende das offizielle Nginx-Image als Basis
 FROM nginx:latest
 
-# Copy your HTML files into the container
+# Installiere Certbot und Nginx-Plugin für Certbot
+RUN apt-get update && \
+    apt-get install -y certbot python3-certbot-nginx && \
+    apt-get clean
+
+# Kopiere deine HTML-Dateien in den Container
 COPY ./html /usr/share/nginx/html
 
-# Copy custom Nginx configuration file
+# Kopiere deine benutzerdefinierte Nginx-Konfigurationsdatei
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
-# Copy SSL files (optional for HTTPS)
-# COPY ./ssl /etc/nginx/ssl
+# Exponiere sowohl HTTP- als auch HTTPS-Ports
+EXPOSE 80 443
 
-# Default command to start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Generiere SSL-Zertifikate und starte Nginx
+# Der Nginx-Server wird automatisch mit SSL-Zertifikaten von Let's Encrypt konfiguriert
+CMD certbot --nginx --non-interactive --agree-tos --email your-email@example.com && nginx -g "daemon off;"
