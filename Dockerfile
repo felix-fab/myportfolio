@@ -17,4 +17,4 @@ EXPOSE 80 443
 
 # Generiere SSL-Zertifikate und starte Nginx
 # Der Nginx-Server wird automatisch mit SSL-Zertifikaten von Let's Encrypt konfiguriert
-CMD certbot --nginx --non-interactive --agree-tos --email info.felixfab@gmail.com -d felixfab.de -d www.felixfab.de && nginx -g "daemon off;"
+CMD certbot --standalone --non-interactive --agree-tos --email info.felixfab@gmail.com -d felixfab.de -d www.felixfab.de && nginx -g "daemon off;"
