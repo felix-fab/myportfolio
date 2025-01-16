@@ -4,7 +4,8 @@ FROM nginx:latest
 # Installiere Certbot und Nginx-Plugin für Certbot
 RUN apt-get update && \
     apt-get install -y certbot python3-certbot-nginx && \
-    apt-get clean
+    apt-get clean && \
+    nginx -v # Überprüfe, ob Nginx korrekt installiert wurde
 
 # Kopiere deine HTML-Dateien in den Container
 COPY ./html /usr/share/nginx/html
