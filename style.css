@@ -317,6 +317,20 @@ body {
     opacity: .75;
 }
 
+.form-label {
+    color: white;
+}
+
+.form-control{
+    color: #494748;
+}
+
+.form-control:focus {
+    outline: 2px solid #ff5100;
+    border: none;
+    box-shadow: none;
+}
+
 @media (max-width: 992px) {
     .custom-nav .nav-item {
         margin-right: 0;

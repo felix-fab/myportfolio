@@ -42,7 +42,7 @@
             <a class="nav-link notSelected" href="#projects">Projekte</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link notSelected" href="#">Kontakt</a>
+            <a class="nav-link notSelected" href="#contact-me">Kontakt</a>
           </li>
         </ul>
       </div>
@@ -314,37 +314,51 @@
           <div class="row">
             <div class="col-md-6">
               <div class="mb-3">
-                <label for="firstName" class="form-label">Name</label>
+                <label for="firstName" class="form-label">Vorname</label>
                 <input type="text" class="form-control" id="firstName" placeholder="Vorname">
               </div>
             </div>
             <div class="col-md-6">
               <div class="mb-3">
-                <label for="lastName" class="form-label">E-Mail Addresse</label>
-                <input type="text" class="form-control" id="lastName" placeholder="Nachname">
+                <label for="mobileNumber" class="form-label">Nachname</label>
+                <input type="text" class="form-control" id="mobileNumber" placeholder="Nachname">
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <div class="mb-3">
-                <label for="firstName" class="form-label">Name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="Vorname">
+                <label for="email" class="form-label">E-Mail Addresse</label>
+                <input type="email" class="form-control" id="email" placeholder="E-Mail Addresse">
               </div>
             </div>
             <div class="col-md-6">
               <div class="mb-3">
-                <label for="lastName" class="form-label">E-Mail Addresse</label>
-                <input type="text" class="form-control" id="lastName" placeholder="Nachname">
+                <label for="mobileNumber" class="form-label">Mobile Number</label>
+                <input type="text" class="form-control" id="mobileNumber" placeholder="Mobile Number">
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
-              <label for="largeTextbox" class="form-label">Große Textbox</label>
-              <textarea class="form-control" id="largeTextbox" rows="8" placeholder="Gib hier deinen Text ein..."
+              <div class="mb-3">
+                <label for="subject" class="form-label">Betreff</label>
+                <input type="text" class="form-control" id="subject" placeholder="Betreff">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="largeTextbox" class="form-label">Nachricht</label>
+              <textarea class="form-control" id="largeTextbox" rows="6" placeholder="Nachricht"
                 style="resize: none;"></textarea>
             </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-12">
+              <button type="submit" class="btn portfolio">Senden</button>
+            </div>
+          </div>
         </form>
       </div>
     </div>
