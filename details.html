@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:;">
+
+  <title>Detailseite</title>
+  <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/styles/details.css">
+  <script type="text/javascript" src="./assets/scripts/details.js"></script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+</head>
+
+<body>
+  <nav class="navbar-background navbar navbar-expand-lg">
+    <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="index.html#">
+        <img src="./assets/images/Logo.png" alt="Logo" width="120" height="50" class="d-inline-block align-text-top">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav custom-nav mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link notSelected" aria-current="page" href="index.html#">Startseite</a>
+          </li>
+          <li class="nav-about-me nav-item">
+            <a class="nav-link notSelected" href="index.html#about-me">Über mich</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notSelected" href="index.html#references">Referenzen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notSelected" href="index.html#projects">Projekte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notSelected" href="index.html#contact-me">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="detail-container">
+    <div class="container">
+      <header class="header-section">
+        <h1 class="detail-header">Mehr Details zu</h1>
+      </header>
+      <div class="header-row row">
+        <div class="col-md-12 text-center">
+          <h2 id="detail-header" class="detail-title"></h2>
+        </div>
+      </div>
+      <div class="content-row row align-items-center">
+        <div class="text-container">
+          <img id="detail-image" alt="Detail Bild" class="img-fluid">
+          <p id="detail-content"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-container text-light py-4 mt-auto">
+    <div class="container position-relative">
+      <div class="footer-logo-container">
+        <img src="./assets/images/Logo.png" alt="Logo" class="footer-logo">
+      </div>
+
+      <div class="footer-content">
+        <nav class="nav justify-content-center mb-4">
+          <a href="index.html#" class="nav-link text-light">Startseite</a>
+          <a href="index.html#about-me" class="nav-link text-light">Über uns</a>
+          <a href="index.html#references" class="nav-link text-light">Referenzen</a>
+          <a href="index.html#projects" class="nav-link text-light">Projekte</a>
+          <a href="index.html#contact-me" class="nav-link text-light">Kontakt</a>
+        </nav>
+
+        <p class="mb-4">© 2025 Felix Wiegand</p>
+        <div>
+          <a href="../Datenschutz/datenschutz.html" class="text-light text-decoration-none me-3">Datenschutz</a>
+          <a href="../Impressum/impressum.html" class="text-light text-decoration-none">Impressum</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+html {
+    margin: 0px;
+}
+
+body {
+    background-color: #494748;
+    overflow-x: hidden;
+    text-align: center;
+    margin: 15px;
+    overflow-wrap: break-word;
+    color: white;
+}
+
+.wp-block-heading{
+    color: #ff5100;
+}
+
+a:active {
+    color: darkgray;
+}
+a:visited {
+    color:darkgray;
+}
