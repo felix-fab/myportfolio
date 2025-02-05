@@ -108,35 +108,23 @@ window.onload = function () {
             location.href = '#references';
         });
 
-        $('#artistMore').click(function () {
+        $('#StudiumMore').click(function () {
             location.href = 'details.html?id=0001';
         });
 
-        $('#designerMore').click(function () {
+        $('#FOSMore').click(function () {
+            location.href = 'details.html?id=0002';
+        });
+
+        $('#FulltimeMore').click(function () {
             location.href = 'details.html?id=0001';
         });
 
-        $('#marketingMore').click(function () {
+        $('#EducationMore').click(function () {
             location.href = 'details.html?id=0001';
         });
 
-        $('#marketingMore2').click(function () {
-            location.href = 'details.html?id=0001';
-        });
-
-        $('#marketingMore3').click(function () {
-            location.href = 'details.html?id=0001';
-        });
-
-        $('#marketingMore4').click(function () {
-            location.href = 'details.html?id=0001';
-        });
-
-        $('#marketingMore5').click(function () {
-            location.href = 'details.html?id=0001';
-        });
-
-        $('#marketingMore6').click(function () {
+        $('#SchoolDiplomaMore').click(function () {
             location.href = 'details.html?id=0001';
         });
     }
