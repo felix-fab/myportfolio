@@ -201,6 +201,44 @@ nav a:hover {
     }
 }
 
+@media (min-width: 993px) and (min-height: 690px) {
+
+    /*Animations*/
+    .header-fly-in-top {
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+
+    .header-fly-in-top.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .titel-fly-in-bottom {
+        transform: translateY(50px);
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+
+    .titel-fly-in-bottom.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .content-fly-in-bottom {
+        transform: translateY(50px);
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+
+    .content-fly-in-bottom.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
 @media (max-width: 768px) {
     .footer-logo-container {
         position: static;

@@ -1,6 +1,4 @@
 window.onload = function () {
-    emailjs.init("Ad2wwViTCVM6-PT56");
-
     const texts = ["Kreativer App-Designer", "Problemlöser", "Anwendungsentwickler", "Team Player", "Technischer Berater"];
     const typingSpeed = 200;
     const deletingSpeed = 100;
@@ -88,7 +86,6 @@ window.onload = function () {
         });
     }
 
-
     function setProjectShowMoreEvent() {
         $('#project-show-more').click(function () {
             if (!projectShowMore) {
@@ -165,15 +162,23 @@ window.onload = function () {
                 message
             };
 
-            emailjs.send('service_pbfsuek', 'template_tf18fob', templateParams)
-                .then(() => {
+            fetch("https://default-api-manager.felixfab.de/send-contact-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(templateParams),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
                     console.log("Kontakt erfolgreich gesendet");
 
                     const modal = document.getElementById('successModal');
                     modal.style.display = 'flex';
-                }, (error) => {
+                } else {
                     console.log('FAILED...', error);
-                });
+                }
+            })
+            .catch(error => console.error("Fehler:", error));
         });
 
         document.getElementById('dialogOk').addEventListener('click', function (event) {
