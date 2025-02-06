@@ -265,6 +265,37 @@ body {
     padding: 30px;
 }
 
+.projects-mobile-show-more {
+    display: none;
+}
+
+.project-more-icon {
+    color: white;
+    padding: 15px;
+    background-color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+}
+
+.project-more-header {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.project-more-description {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.project-more-icon-container {
+    width: 40px;
+    height: 40px;
+    background-color: darkgrey;
+    border-radius: 50%;
+    height: auto;
+}
+
 .content-container {
     display: flex;
     height: calc(100% - 172px);
@@ -282,7 +313,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, #ff5100, rgba(255, 102, 0, 0.0));
+    background: linear-gradient(to top, #ff5100, rgba(255, 102, 0, 0.308));
     color: white;
     display: flex;
     flex-direction: column;
@@ -379,6 +410,11 @@ body {
 
 #contact-me {
     margin-bottom: 30px;
+}
+
+.contact-input-container {
+    padding-right: 2px;
+    padding-left: 2px;
 }
 
 .form-label {
@@ -738,5 +774,19 @@ nav a:hover {
     .contact-me-fly-in-content-bottom.active {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@media (max-width: 500px) {
+    .project-more-header {
+        font-size: 20px;
+    }
+
+    .project-more-description {
+        font-size: 15px;
+    }
+
+    .project-more-icon{
+        padding: 10px;
     }
 }
