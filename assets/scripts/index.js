@@ -57,11 +57,11 @@ window.onload = function () {
     function openReferencesCarousel() {
         $('.references-carousel').slick({
             dots: true,
-            infinite: true,
+            infinite: false,
             speed: 1500,
             slidesToShow: 3,
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 8000,
             responsive: [
                 {
