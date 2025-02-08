@@ -198,6 +198,7 @@ body {
 .project-image-container {
     aspect-ratio: 16/9;
     object-fit: contain;
+    width: 100%;
 }
 
 .project-image {
@@ -248,6 +249,7 @@ body {
 
 .references-carousel {
     width: 100%;
+    overflow: visible !important;
 }
 
 .projects-carousel {

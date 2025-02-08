@@ -69,7 +69,7 @@ window.onload = function () {
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
-                        infinite: true,
+                        infinite: false,
                         dots: true
                     }
                 },
@@ -78,12 +78,16 @@ window.onload = function () {
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        infinite: true,
+                        infinite: false,
                         dots: true
                     }
                 },
             ]
         });
+
+        $('.references-carousel').slick('slickSetOption', 'infinite', false, true);
+
+        console.log($('.references-carousel').slick('getSlick'));
     }
 
     function setProjectShowMoreEvent() {
