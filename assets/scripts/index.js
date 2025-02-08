@@ -99,6 +99,9 @@ window.onload = function () {
             } else {
                 $('.projects-mobile-show-more').fadeOut(500);
 
+                const target = document.getElementById("projects");
+                target.scrollIntoView({ behavior: "smooth" });
+
                 $(this).text('Mehr anzeigen');
             }
 
@@ -131,6 +134,14 @@ window.onload = function () {
         $('#SchoolDiplomaMore').click(function () {
             location.href = 'details.html?id=0001';
         });
+
+        $('#WohnPilotMore').click(function () {
+            location.href = 'details.html?id=0004';
+        });
+
+        $('#PortfolioMore').click(function () {
+            location.href = 'details.html?id=0005';
+        });
     }
 
     function setFormularSendEvent() {
@@ -159,18 +170,18 @@ window.onload = function () {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(templateParams),
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    console.log("Kontakt erfolgreich gesendet");
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        console.log("Kontakt erfolgreich gesendet");
 
-                    const modal = document.getElementById('successModal');
-                    modal.style.display = 'flex';
-                } else {
-                    console.log('FAILED...', error);
-                }
-            })
-            .catch(error => console.error("Fehler:", error));
+                        const modal = document.getElementById('successModal');
+                        modal.style.display = 'flex';
+                    } else {
+                        console.log('FAILED...', error);
+                    }
+                })
+                .catch(error => console.error("Fehler:", error));
         });
 
         document.getElementById('dialogOk').addEventListener('click', function (event) {
