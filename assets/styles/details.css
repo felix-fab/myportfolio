@@ -1,0 +1,263 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    overscroll-behavior: none;
+}
+
+body {
+    background-color: #494748;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.currentSelected {
+    color: #ff5100 !important;
+    font-size: 1.1rem;
+}
+
+.notSelected {
+    color: white !important;
+    font-size: 1.1rem;
+}
+
+.navbar-background {
+    background-color: #494748;
+}
+
+.navbar-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.navbar {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.navbar-nav {
+    gap: 30px;
+    margin-right: 120px;
+}
+
+.navbar-toggler {
+    position: absolute;
+    right: 25px;
+}
+
+.header-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.image-section img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.content-section {
+    padding: 40px;
+    background-color: #292929;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.footer-container {
+    background-color: #3a393a;
+    text-align: center;
+    position: relative;
+}
+
+.footer-logo-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+.footer-content {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.nav-about-me {
+    min-width: 120px;
+}
+
+nav a {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #bbb;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-content a {
+    margin: 0 10px;
+    font-size: 16px;
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    color: #ff5100 !important;
+}
+
+.detail-image {
+    height: 170px;
+    border-radius: 20px;
+}
+
+.detail-header {
+    color: white;
+    font-size: 3rem;
+}
+
+.header-section {
+    padding-bottom: 20px;
+}
+
+.detail-title {
+    color: #ff5100;
+    font-size: 2.5rem;
+}
+
+.detail-description {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container {
+    border: 2px #ff5100 ridge;
+    padding: 30px;
+    border-radius: 10px;
+    display: block;
+    overflow: hidden;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.text-container img {
+    float: right;
+    margin-left: 20px;
+    max-width: 30%;
+    height: auto;
+    border: 1px white solid;
+}
+
+.text-container p {
+    color: white;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.text-container h5 {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.header-row {
+    margin-bottom: 60px;
+}
+
+.content-row {
+    margin-bottom: 60px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#detail-image {
+    margin-bottom: 15px;
+}
+
+@media (min-width: 993px) and (min-height: 690px) {
+    .detail-container {
+        min-height: calc(100vh - 111px);
+    }
+}
+
+@media (min-width: 993px) and (min-height: 690px) {
+
+    /*Animations*/
+    .header-fly-in-top {
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+
+    .header-fly-in-top.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .titel-fly-in-bottom {
+        transform: translateY(50px);
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+
+    .titel-fly-in-bottom.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .content-fly-in-bottom {
+        transform: translateY(50px);
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+
+    .content-fly-in-bottom.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@media (max-width: 768px) {
+    .footer-logo-container {
+        position: static;
+        transform: none;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px){
+    .detail-title {
+        font-size: 2.0rem;
+    }
+
+    .detail-header {
+        font-size: 2.5rem;
+    }
+}

@@ -5,21 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline';
+        font-src 'self';
+        img-src 'self' data:;
+        connect-src 'self' https://default-api-manager.felixfab.de;
+    ">
 
-  <link rel="stylesheet" href="style.css">
+  <title>Portfolio Felix Wiegand</title>
+
+  <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/scripts/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/scripts/slick/slick-theme.css" />
+
+  <link rel="stylesheet" href="./assets/styles/index.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
 </head>
 
 <body>
   <nav class="navbar-background navbar navbar-expand-lg">
-    <div class="container-fluid">
+    <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="/Images/Felix Wiegand.png" alt="Logo" width="120" height="50" class="d-inline-block align-text-top">
+        <img src="./assets/images/Logo.png" alt="Logo" width="120" height="50" class="d-inline-block align-text-top">
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -32,7 +46,7 @@
           <li class="nav-item">
             <a class="nav-link currentSelected" aria-current="page" href="#">Startseite</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-about-me nav-item">
             <a class="nav-link notSelected" href="#about-me">Über mich</a>
           </li>
           <li class="nav-item">
@@ -42,7 +56,7 @@
             <a class="nav-link notSelected" href="#projects">Projekte</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link notSelected" href="#">Kontakt</a>
+            <a class="nav-link notSelected" href="#contact-me">Kontakt</a>
           </li>
         </ul>
       </div>
@@ -66,31 +80,35 @@
 
               <div class="actions">
                 <div class="action-item">
-                  <a href="#" class="fa fa-facebook" style="color: #ff5100;"></a>
+                  <a href="https://www.linkedin.com/in/felix-wiegand-b0928b299/" class="orange-text fa fa-linkedin"></a>
                 </div>
                 <div class="action-item">
-                  <a href="#" class="fa fa-instagram" style="color: #ff5100;"></a>
+                  <a href="mailto:info.felixfab@gmail.com" class="orange-text fa fa-envelope"></a>
                 </div>
                 <div class="action-item">
-                  <a href="#" class="fa fa-linkedin" style="color: #ff5100;"></a>
+                  <a href="tel:+4917642953126" class="orange-text fa fa-phone"></a>
                 </div>
                 <div class="action-item">
-                  <a href="#" class="fa fa-google-plus" style="color: #ff5100;"></a>
+                  <a href="https://www.instagram.com/_felixfab_/" class="orange-text fa fa-instagram"></a>
                 </div>
               </div>
               <div>
-                <button class="btn portfolio">Mein Portfolio</button>
+                <button id="myPortfolio" class="btn portfolio">Mein Portfolio</button>
               </div>
             </div>
           </div>
           <div class="home-image col">
             <div class="image-container">
-              <image class="home-fly-in-right image" src="/Images/Tester.png"></image>
+              <image class="home-fly-in-right image" src="./assets/images/About-Me.png"></image>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="page-divider-container">
+    <div class="page-divider"></div>
   </div>
 
   <div id="about-me" class="second-content">
@@ -99,24 +117,23 @@
         <div class="row">
           <div class="about-me-image col">
             <div class="image-container">
-              <image class="about-me-fly-in-right image" src="/Images/Tester.png"></image>
+              <image class="about-me-fly-in-right image" src="./assets/images/About-Me2.png"></image>
             </div>
           </div>
           <div class="col">
             <div class="about-me-info-container">
-              <div class="about-me-fly-in-title header">Über <span style="color: #ff5100;">Mich</span></div>
+              <div class="about-me-fly-in-title header">Über <span class="orange-text">Mich</span></div>
               <div class="about-me-info-description about-me-fly-in-left">
-                <div class="second-header">Artist & Designer!</div>
-                <div class="header-description">Ich bin ein engagierter Entwickler mit einer
-                  abgeschlossenen Ausbildung
-                  und einer soliden beruflichen Erfahrung in der Welt der Webentwicklung. Während meiner bisherigen
-                  Laufbahn habe ich an verschiedenen Projekten gearbeitet und dabei wertvolle Kenntnisse in der
-                  Erstellung
-                  moderner und funktionaler Webanwendungen gesammelt. Meine Leidenschaft liegt darin, kreative und
-                  effiziente digitale Lösungen zu entwickeln, die den höchsten Anforderungen gerecht werden. Mit einem
-                  Auge für Details und einer Affinität für sauberen, strukturierten Code setze ich Ideen in
-                  leistungsstarke Ergebnisse um. Ich strebe danach, meine Fähigkeiten stetig weiterzuentwickeln und mit
-                  innovativen Technologien die digitale Zukunft mitzugestalten.</div>
+                <div class="second-header">Anwendungsentwickler</div>
+                <div class="header-description">Ich bin ein engagierter Anwendungsentwickler mit einer abgeschlossenen
+                  Ausbildung und erster wertvoller Berufserfahrung in der Webentwicklung. Während meiner Ausbildung und
+                  der darauffolgenden Vollzeitstelle habe ich aktiv an der Weiterentwicklung einer HCM-Software
+                  gearbeitet und dabei meine Fähigkeiten in HTML, CSS und JavaScript geschärft.
+                  Meine Leidenschaft liegt darin, moderne und leistungsfähige Webanwendungen zu entwickeln, die sowohl
+                  funktional als auch benutzerfreundlich sind. Ich lege großen Wert auf sauberen, strukturierten Code
+                  und effiziente Lösungen, die den höchsten Anforderungen gerecht werden.
+                  Mit einem kontinuierlichen Lernwillen und dem Interesse an neuen Technologien strebe ich danach, mein
+                  Wissen stetig zu erweitern und die digitale Zukunft aktiv mitzugestalten.</div>
               </div>
             </div>
           </div>
@@ -125,98 +142,91 @@
     </div>
   </div>
 
+  <div class="page-divider-container">
+    <div class="page-divider"></div>
+  </div>
+
   <div id="references" class="second-content">
     <div class="main-content-block">
-      <div class="references-fly-in-title block-header header">Meine <span style="color: #ff5100;">Referenzen</span>
+      <div class="references-fly-in-title block-header header">Meine <span class="orange-text">Referenzen</span>
       </div>
       <div class="reference-container content-container">
         <div class="references-fly-in-content references-carousel">
           <div class="reference">
             <div class="reference-icon-container">
               <span class="reference-icon material-symbols-outlined">
-                palette
+                import_contacts
               </span>
-              <div class="second-header">Artist</div>
-              <div class="header-description">Art is an attempt to simulate what is happening on the ground in a way
-                that encourages people to do what is good and terrifies them from doing what is bad</div>
-              <button class="btn portfolio">Mehr ansehen</button>
+              <div class="second-header">Studium</div>
+
+              <div class="time-header-container">
+                <span class="time-header">In Zunkunft</span>
+              </div>
+
+              <div class="header-description">In Zukunft plane ich, angewandte Informatik in Mainz zu studieren, um meine Kenntnisse in der Softwareentwicklung und Informatik weiter zu vertiefen und mich auf eine erfolgreiche Karriere in der IT-Branche vorzubereiten.</div>
+              <button id="StudiumMore" class="btn portfolio">Mehr ansehen</button>
             </div>
           </div>
           <div class="reference">
             <div class="reference-icon-container">
               <span class="reference-icon material-symbols-outlined">
-                ink_highlighter
+                school
               </span>
-              <div class="second-header">Graphic Design</div>
-              <div class="header-description">Art is an attempt to simulate what is happening on the ground in a way
-                that encourages people to do what is good and terrifies them from doing what is bad</div>
-              <button class="btn portfolio">Mehr ansehen</button>
+              <div class="second-header">Fachabitur</div>
+
+              <div class="time-header-container">
+                <span class="time-header">2025 - 2024</span>
+              </div>
+
+              <div class="header-description">Ich besuche die Fachoberschule (FOS) an der Konrad Zuse Schule in Hünfeld
+                als B-Former. Die Ausbildung bereitet mich nicht nur auf die IT-Branche vor, sondern bietet auch die
+                Möglichkeit, außerhalb von Hessen zu studieren.</div>
+              <button id="FOSMore" class="btn portfolio">Mehr ansehen</button>
             </div>
           </div>
           <div class="reference">
             <div class="reference-icon-container">
               <span class="reference-icon material-symbols-outlined">
-                trending_up
+                people
               </span>
-              <div class="second-header">Marketing</div>
-              <div class="header-description">Art is an attempt to simulate what is happening on the ground in a way
-                that encourages people to do what is good and terrifies them from doing what is bad</div>
-              <button class="btn portfolio">Mehr ansehen</button>
+              <div class="second-header">Vollzeittätigkeit</div>
+
+              <div class="time-header-container">
+                <span class="time-header">08.2024 - 05.2024</span>
+              </div>
+
+              <div class="header-description">Nach meiner Ausbildung habe ich drei Monate in meiner Firma als Vollzeitentwickler an der Weiterentwicklung einer HCM-Software mit HTML, CSS und JavaScript gearbeitet und wertvolle praktische Erfahrungen gesammelt.</div>
+              <button id="FulltimeMore" class="btn portfolio">Mehr ansehen</button>
             </div>
           </div>
           <div class="reference">
             <div class="reference-icon-container">
               <span class="reference-icon material-symbols-outlined">
-                trending_up
+                code
               </span>
-              <div class="second-header">Marketing</div>
-              <div class="header-description">Art is an attempt to simulate what is happening on the ground in a way
-                that encourages people to do what is good and terrifies them from doing what is bad</div>
-              <button class="btn portfolio">Mehr ansehen</button>
+              <div class="second-header">Ausbildung</div>
+
+              <div class="time-header-container">
+                <span class="time-header">2024 - 2021</span>
+              </div>
+
+              <div class="header-description">Ich habe eine dreijährige Ausbildung als Anwendungsentwickler abgeschlossen, in der ich umfassende Kenntnisse in Programmiersprachen wie HTML, CSS und JavaScript erlangt und an verschiedenen Softwareprojekten gearbeitet habe.</div>
+              <button id="EducationMore" class="btn portfolio">Mehr ansehen</button>
             </div>
           </div>
           <div class="reference">
             <div class="reference-icon-container">
               <span class="reference-icon material-symbols-outlined">
-                trending_up
+                school
               </span>
-              <div class="second-header">Marketing</div>
-              <div class="header-description">Art is an attempt to simulate what is happening on the ground in a way
-                that encourages people to do what is good and terrifies them from doing what is bad</div>
-              <button class="btn portfolio">Mehr ansehen</button>
-            </div>
-          </div>
-          <div class="reference">
-            <div class="reference-icon-container">
-              <span class="reference-icon material-symbols-outlined">
-                trending_up
-              </span>
-              <div class="second-header">Marketing</div>
-              <div class="header-description">Art is an attempt to simulate what is happening on the ground in a way
-                that encourages people to do what is good and terrifies them from doing what is bad</div>
-              <button class="btn portfolio">Mehr ansehen</button>
-            </div>
-          </div>
-          <div class="reference">
-            <div class="reference-icon-container">
-              <span class="reference-icon material-symbols-outlined">
-                trending_up
-              </span>
-              <div class="second-header">Marketing</div>
-              <div class="header-description">Art is an attempt to simulate what is happening on the ground in a way
-                that encourages people to do what is good and terrifies them from doing what is bad</div>
-              <button class="btn portfolio">Mehr ansehen</button>
-            </div>
-          </div>
-          <div class="reference">
-            <div class="reference-icon-container">
-              <span class="reference-icon material-symbols-outlined">
-                trending_up
-              </span>
-              <div class="second-header">Marketing</div>
-              <div class="header-description">Art is an attempt to simulate what is happening on the ground in a way
-                that encourages people to do what is good and terrifies them from doing what is bad</div>
-              <button class="btn portfolio">Mehr ansehen</button>
+              <div class="second-header">Realschule</div>
+
+              <div class="time-header-container">
+                <span class="time-header">2021 - 2015</span>
+              </div>
+
+              <div class="header-description">Ich habe meinen Realschulabschluss an der Jahnschule Fulda erfolgreich abgelegt, wo ich fundierte Grundlagen in verschiedenen Fachbereichen erlernt habe und meine schulische Ausbildung auf die berufliche Zukunft vorbereitet wurde.</div>
+              <button id="SchoolDiplomaMore" class="btn portfolio">Mehr ansehen</button>
             </div>
           </div>
         </div>
@@ -224,76 +234,73 @@
     </div>
   </div>
 
+  <div class="page-divider-container">
+    <div class="page-divider"></div>
+  </div>
+
   <div id="projects" class="second-content">
     <div class="main-content-block">
-      <div class="projects-fly-in-title block-header header">Letzte <span style="color: #ff5100;">Projekte</span></div>
+      <div class="projects-fly-in-title block-header header">Letzte <span class="orange-text">Projekte</span></div>
       <div class="projects-fly-in-content content-container">
         <div class="container">
           <div class="row g-4">
             <div class="col-12 col-md-6 col-lg-4">
               <div class="project-image-container image-container">
-                <img
-                  src="https://b2084911.smushcdn.com/2084911/wp-content/uploads/2022/08/app-konzeption-1030x687.jpg?lossy=0&strip=1&webp=1"
-                  class="project-image">
+                <img src="./assets/images/projects/WohnPilot.png" class="project-image">
                 <div class="overlay">
-                  <h3>Brand Name</h3>
-                  <p>To view projects, click on the image</p>
-                  <a href="#" class="icon">🔗</a>
+                  <h3 class="project-more-header">WohnPilot</h3>
+                  <p class="project-more-description">Für mehr Details hier klicken:</p>
+                  <a id="WohnPilotMore" class="project-more-icon material-symbols-outlined">open_in_new</a>
                 </div>
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
               <div class="project-image-container image-container">
-                <img
-                  src="https://b2084911.smushcdn.com/2084911/wp-content/uploads/2022/08/app-konzeption-1030x687.jpg?lossy=0&strip=1&webp=1"
-                  class="project-image">
+                <img src="./assets/images/projects/myPortfolio.png" class="project-image">
                 <div class="overlay">
-                  <h3>Brand Name</h3>
-                  <p>To view projects, click on the image</p>
-                  <a href="#" class="icon">🔗</a>
+                  <h3 class="project-more-header">Portfolio Webseite</h3>
+                  <p class="project-more-description">Für mehr Details hier klicken:</p>
+                  <a id="PortfolioMore" class="project-more-icon material-symbols-outlined">open_in_new</a>
                 </div>
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
               <div class="project-image-container image-container">
-                <img
-                  src="https://b2084911.smushcdn.com/2084911/wp-content/uploads/2022/08/app-konzeption-1030x687.jpg?lossy=0&strip=1&webp=1"
-                  class="project-image">
+                <img src="./assets/images/projects/NAO-Controller.png" class="project-image">
                 <div class="overlay">
-                  <h3>Brand Name</h3>
-                  <p>To view projects, click on the image</p>
-                  <a href="#" class="icon">🔗</a>
+                  <h3 class="project-more-header">Nao Controller</h3>
+                  <p class="project-more-description">Für mehr Details hier klicken:</p>
+                  <a id="NaoControllerMore" class="project-more-icon material-symbols-outlined">open_in_new</a>
                 </div>
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 projects-mobile-show-more">
               <div class="project-image-container image-container">
-                <img
-                  src="https://b2084911.smushcdn.com/2084911/wp-content/uploads/2022/08/app-konzeption-1030x687.jpg?lossy=0&strip=1&webp=1"
-                  class="project-image">
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 projects-mobile-show-more">
-              <div class="project-image-container image-container">
-                <img
-                  src="https://b2084911.smushcdn.com/2084911/wp-content/uploads/2022/08/app-konzeption-1030x687.jpg?lossy=0&strip=1&webp=1"
-                  class="project-image">
+                <img src="./assets/images/projects/ComingSoon.gif" class="project-image">
                 <div class="overlay">
-                  <h3>Brand Name</h3>
-                  <p>To view projects, click on the image</p>
-                  <a href="#" class="icon">🔗</a>
+                  <h3 class="project-more-header">Coming Soon</h3>
+                  <p class="project-more-description">Für mehr Details hier klicken:</p>
+                  <a class="project-more-icon material-symbols-outlined">open_in_new</a>
                 </div>
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 projects-mobile-show-more">
               <div class="project-image-container image-container">
-                <img
-                  src="https://b2084911.smushcdn.com/2084911/wp-content/uploads/2022/08/app-konzeption-1030x687.jpg?lossy=0&strip=1&webp=1"
-                  class="project-image">
+                <img src="./assets/images/projects/ComingSoon.gif" class="project-image">
                 <div class="overlay">
-                  <h3>Brand Name</h3>
-                  <p>To view projects, click on the image</p>
-                  <a href="#" class="icon">🔗</a>
+                  <h3 class="project-more-header">Coming Soon</h3>
+                  <p class="project-more-description">Für mehr Details hier klicken:</p>
+                  <a class="project-more-icon material-symbols-outlined">open_in_new</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 projects-mobile-show-more">
+              <div class="project-image-container image-container">
+                <img src="./assets/images/projects/ComingSoon.gif" class="project-image">
+                <div class="overlay">
+                  <h3 class="project-more-header">Coming Soon</h3>
+                  <p class="project-more-description">Für mehr Details hier klicken:</p>
+                  <a class="project-more-icon material-symbols-outlined">open_in_new</a>
                 </div>
               </div>
             </div>
@@ -306,56 +313,119 @@
     </div>
   </div>
 
+  <div class="page-divider-container">
+    <div class="page-divider"></div>
+  </div>
+
   <div id="contact-me" class="second-content">
     <div class="main-content-block">
-      <div class="block-header header">Kontaktiere <span style="color: #ff5100;">Mich</span></div>
-      <div class="content-container">
-        <form>
+      <div class="contact-me-fly-in-title block-header header">Kontaktiere <span class="orange-text">Mich</span></div>
+      <div class="contact-me-fly-in-content content-container">
+        <form id="contact-me">
           <div class="row">
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label for="firstName" class="form-label">Name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="Vorname">
+            <div class="contact-me-fly-in-content-name-left col-md-6">
+              <div class="contact-input-container mb-3">
+                <label for="firstName" class="form-label">Vorname</label>
+                <input type="text" class="form-control" id="contact-firstName" placeholder="Vorname" required>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label for="lastName" class="form-label">E-Mail Addresse</label>
-                <input type="text" class="form-control" id="lastName" placeholder="Nachname">
+            <div class="contact-me-fly-in-content-name-right col-md-6">
+              <div class="contact-input-container mb-3">
+                <label for="mobileNumber" class="form-label">Nachname</label>
+                <input type="text" class="form-control" id="contact-lastName" placeholder="Nachname" required>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label for="firstName" class="form-label">Name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="Vorname">
+            <div class="contact-me-fly-in-content-data-left col-md-6">
+              <div class="contact-input-container mb-3">
+                <label for="email" class="form-label">E-Mail Addresse</label>
+                <input type="email" class="form-control" id="contact-email" placeholder="E-Mail Addresse" required>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label for="lastName" class="form-label">E-Mail Addresse</label>
-                <input type="text" class="form-control" id="lastName" placeholder="Nachname">
+            <div class="contact-me-fly-in-content-data-right col-md-6">
+              <div class="contact-input-container mb-3">
+                <label for="mobileNumber" class="form-label">Mobile Number</label>
+                <input type="text" class="form-control" id="contact-mobileNumber" placeholder="Mobile Number" required>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <label for="largeTextbox" class="form-label">Große Textbox</label>
-              <textarea class="form-control" id="largeTextbox" rows="8" placeholder="Gib hier deinen Text ein..."
-                style="resize: none;"></textarea>
+          <div class="contact-input-container contact-me-fly-in-content-bottom">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="contact-input-container mb-3">
+                  <label for="subject" class="form-label">Betreff</label>
+                  <input type="text" class="form-control" id="contact-subject" placeholder="Betreff" required>
+                </div>
+              </div>
             </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="largeTextbox" class="form-label">Nachricht</label>
+                <textarea class="form-control" id="contact-message" rows="6" placeholder="Nachricht"
+                  required></textarea>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-12">
+                <button id="contact_submit" type="submit" class="btn portfolio">Senden</button>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <div id="successModal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Erfolg!</h4>
+        </div>
+        <div>
+          <img src="./assets/images/Formular-Send.gif" style="width: 120px; height: 120px;">
+        </div>
+        <div class="modal-body">
+          <p>Deine Nachricht wurde erfolgreich gesendet. Ich melde mich schnellstmöglich bei dir!</p>
+        </div>
+        <div class="modal-footer">
+          <button id="dialogOk" class="btn portfolio">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <script type="text/javascript" src="slick/slick.min.js"></script>
-  <script language="javascript" type="text/javascript" src="script.js"></script>
+  <footer class="footer-container text-light py-4 mt-auto">
+    <div class="container position-relative">
+      <div class="footer-logo-container">
+        <img src="./assets/images/Logo.png" alt="Logo" class="footer-logo">
+      </div>
+
+      <div class="footer-content">
+        <nav class="nav justify-content-center mb-4">
+          <a href="#" class="nav-link text-light">Startseite</a>
+          <a href="#about-me" class="nav-link text-light">Über uns</a>
+          <a href="#references" class="nav-link text-light">Referenzen</a>
+          <a href="#projects" class="nav-link text-light">Projekte</a>
+          <a href="#contact-me" class="nav-link text-light">Kontakt</a>
+        </nav>
+
+        <p class="mb-4">© 2025 Felix Wiegand</p>
+        <div>
+          <a href="datenschutz.html" class="text-light text-decoration-none me-3">Datenschutz</a>
+          <a href="impressum.html" class="text-light text-decoration-none">Impressum</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="./assets/vendor/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="./assets/vendor/jquery/jquery-migrate.min.js"></script>
+
+  <script type="text/javascript" src="./assets/scripts/slick/slick.min.js"></script>
+  <script language="javascript" type="text/javascript" src="./assets/scripts/index.js"></script>
 </body>
 
 </html>
