@@ -124,23 +124,27 @@ window.onload = function () {
         });
 
         $('#FulltimeMore').click(function () {
-            location.href = 'details.html?id=0001';
+            location.href = 'details.html?id=0003';
         });
 
         $('#EducationMore').click(function () {
-            location.href = 'details.html?id=0001';
-        });
-
-        $('#SchoolDiplomaMore').click(function () {
-            location.href = 'details.html?id=0001';
-        });
-
-        $('#WohnPilotMore').click(function () {
             location.href = 'details.html?id=0004';
         });
 
-        $('#PortfolioMore').click(function () {
+        $('#SchoolDiplomaMore').click(function () {
             location.href = 'details.html?id=0005';
+        });
+
+        $('#WohnPilotMore').click(function () {
+            location.href = 'details.html?id=0006';
+        });
+
+        $('#PortfolioMore').click(function () {
+            location.href = 'details.html?id=0007';
+        });
+
+        $('#NaoControllerMore').click(function () {
+            location.href = 'details.html?id=0008';
         });
     }
 
