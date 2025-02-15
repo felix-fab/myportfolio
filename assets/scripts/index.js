@@ -86,8 +86,6 @@ window.onload = function () {
         });
 
         $('.references-carousel').slick('slickSetOption', 'infinite', false, true);
-
-        console.log($('.references-carousel').slick('getSlick'));
     }
 
     function setProjectShowMoreEvent() {
@@ -115,36 +113,76 @@ window.onload = function () {
             location.href = '#references';
         });
 
-        $('#StudiumMore').click(function () {
+        let StudiumMore = $("#StudiumMore");
+        StudiumMore.on("click", function(event) {
             location.href = 'details.html?id=0001';
         });
 
-        $('#FOSMore').click(function () {
+        StudiumMore.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0001");
+        });
+
+        let FOSMore = $("#FOSMore");
+        FOSMore.on("click", function(event) {
             location.href = 'details.html?id=0002';
         });
 
-        $('#FulltimeMore').click(function () {
+        FOSMore.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0002");
+        });
+
+        let FulltimeMore = $("#FulltimeMore");
+        FulltimeMore.on("click", function(event) {
             location.href = 'details.html?id=0003';
         });
 
-        $('#EducationMore').click(function () {
+        FulltimeMore.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0003");
+        });
+
+        let EducationMore = $("#EducationMore");
+        EducationMore.on("click", function(event) {
             location.href = 'details.html?id=0004';
         });
 
-        $('#SchoolDiplomaMore').click(function () {
+        EducationMore.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0004");
+        });
+
+        let SchoolDiplomaMore = $("#SchoolDiplomaMore");
+        SchoolDiplomaMore.on("click", function(event) {
             location.href = 'details.html?id=0005';
         });
 
-        $('#WohnPilotMore').click(function () {
+        SchoolDiplomaMore.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0005");
+        });
+
+        let WohnPilotMore = $("#WohnPilotMore");
+        WohnPilotMore.on("click", function(event) {
             location.href = 'details.html?id=0006';
         });
 
-        $('#PortfolioMore').click(function () {
+        WohnPilotMore.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0006");
+        });
+
+        let PortfolioMore = $("#PortfolioMore");
+        PortfolioMore.on("click", function(event) {
             location.href = 'details.html?id=0007';
         });
 
-        $('#NaoControllerMore').click(function () {
+        PortfolioMore.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0007");
+        });
+
+        let NaosControllerMore = $("#NaoControllerMore");
+        NaosControllerMore.on("click", function(event) {
             location.href = 'details.html?id=0008';
+        });
+
+        NaosControllerMore.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0008");
         });
     }
 
@@ -152,7 +190,7 @@ window.onload = function () {
         document.getElementById('contact-me').addEventListener('submit', function (event) {
             event.preventDefault();
 
-            var firstName = document.getElementById('contact-firstName').value;
+            /*var firstName = document.getElementById('contact-firstName').value;
             var lastName = document.getElementById('contact-lastName').value;
             var email = document.getElementById('contact-email').value;
             var mobileNumber = document.getElementById('contact-mobileNumber').value;
@@ -186,6 +224,10 @@ window.onload = function () {
                     }
                 })
                 .catch(error => console.error("Fehler:", error));
+                */
+
+            const modal = document.getElementById('successModal');
+            modal.style.display = 'flex';
         });
 
         document.getElementById('dialogOk').addEventListener('click', function (event) {
@@ -196,6 +238,89 @@ window.onload = function () {
         });
     }
 
+    function openNewTab(event ,url){
+        if (event.button === 1) {
+            let newWindow = window.open(url, "_blank");
+            if (newWindow) {
+                newWindow.focus();
+            } else {
+                alert("Bitte Pop-up-Blocker deaktivieren, um die Seite zu öffnen.");
+            }
+            event.preventDefault();
+        }
+    }
+
+    function configCanvasElement(){
+        const canvas = document.getElementById("modal-canvas");
+        const ctx = canvas.getContext("2d");
+
+        let x = (canvas.width - 100) / 2;
+        let y = (canvas.height - 60) / 2;
+        let shakeOffset = 0;
+        let shaking = false;
+        let shakeDuration = 0;
+        let timeElapsed = 0;
+
+        function drawEnvelope() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        let shakeX = x + shakeOffset;
+
+        ctx.fillStyle = "#FFA500";
+        ctx.fillRect(shakeX, y, 100, 60);
+        ctx.strokeRect(shakeX, y, 100, 60);
+
+        ctx.beginPath();
+        ctx.moveTo(shakeX, y);
+        ctx.lineTo(shakeX + 50, y - 30);
+        ctx.lineTo(shakeX + 100, y);
+        ctx.closePath();
+        ctx.fillStyle = "#FF8C00";
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(shakeX, y);
+        ctx.lineTo(shakeX + 50, y + 30);
+        ctx.lineTo(shakeX + 100, y);
+        ctx.strokeStyle = "#000000";
+        ctx.stroke();
+        }
+
+        function shakeEnvelope() {
+        if (shaking) {
+            timeElapsed += 0.08;
+
+            shakeOffset = Math.sin(timeElapsed * 2) * 10;
+
+            drawEnvelope();
+
+            if (timeElapsed > shakeDuration) {
+            shaking = false;
+            timeElapsed = 0;
+            }
+        }
+        }
+
+        function startShaking() {
+            shaking = true;
+            shakeDuration = 0.5;
+            timeElapsed = 0;
+        }
+
+        setInterval(() => {
+            startShaking();
+        }, 2500);
+
+        function animate() {
+            shakeEnvelope();
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+        drawEnvelope();
+    }
+
     typewriter();
 
     openReferencesCarousel();
@@ -203,6 +328,8 @@ window.onload = function () {
 
     setMoreButtonAction();
     setFormularSendEvent();
+
+    configCanvasElement();
 
     flyIn('.home-fly-in-right');
     flyIn('.home-fly-in-left');
