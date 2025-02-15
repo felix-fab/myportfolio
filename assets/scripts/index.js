@@ -1,5 +1,5 @@
 window.onload = function () {
-    const texts = ["Kreativer App-Designer", "Problemlöser", "Anwendungsentwickler", "Team Player", "Technischer Berater"];
+    const texts = ["Innovativer Entwickler", "Web & Software Coder", "Lösungsfinder", "Agiler Teamplayer", "Tech-Begeisterter"];
     const typingSpeed = 200;
     const deletingSpeed = 100;
     const delayBetweenTexts = 2000;
@@ -122,67 +122,76 @@ window.onload = function () {
             openNewTab(event, "details.html?id=0001");
         });
 
-        let FOSMore = $("#FOSMore");
-        FOSMore.on("click", function(event) {
+        let PartTimeJobMore = $("#PartTimeJobMore");
+        PartTimeJobMore.on("click", function(event) {
             location.href = 'details.html?id=0002';
         });
 
-        FOSMore.on("mousedown", function(event) {
+        PartTimeJobMore.on("mousedown", function(event) {
             openNewTab(event, "details.html?id=0002");
+        });
+
+        let FOSMore = $("#FOSMore");
+        FOSMore.on("click", function(event) {
+            location.href = 'details.html?id=0003';
+        });
+
+        FOSMore.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0003");
         });
 
         let FulltimeMore = $("#FulltimeMore");
         FulltimeMore.on("click", function(event) {
-            location.href = 'details.html?id=0003';
+            location.href = 'details.html?id=0004';
         });
 
         FulltimeMore.on("mousedown", function(event) {
-            openNewTab(event, "details.html?id=0003");
+            openNewTab(event, "details.html?id=0004");
         });
 
         let EducationMore = $("#EducationMore");
         EducationMore.on("click", function(event) {
-            location.href = 'details.html?id=0004';
+            location.href = 'details.html?id=0005';
         });
 
         EducationMore.on("mousedown", function(event) {
-            openNewTab(event, "details.html?id=0004");
+            openNewTab(event, "details.html?id=0005");
         });
 
         let SchoolDiplomaMore = $("#SchoolDiplomaMore");
         SchoolDiplomaMore.on("click", function(event) {
-            location.href = 'details.html?id=0005';
+            location.href = 'details.html?id=0006';
         });
 
         SchoolDiplomaMore.on("mousedown", function(event) {
-            openNewTab(event, "details.html?id=0005");
+            openNewTab(event, "details.html?id=0006");
         });
 
         let WohnPilotMore = $("#WohnPilotMore");
         WohnPilotMore.on("click", function(event) {
-            location.href = 'details.html?id=0006';
+            location.href = 'details.html?id=0007';
         });
 
         WohnPilotMore.on("mousedown", function(event) {
-            openNewTab(event, "details.html?id=0006");
+            openNewTab(event, "details.html?id=0007");
         });
 
         let PortfolioMore = $("#PortfolioMore");
         PortfolioMore.on("click", function(event) {
-            location.href = 'details.html?id=0007';
+            location.href = 'details.html?id=0008';
         });
 
         PortfolioMore.on("mousedown", function(event) {
-            openNewTab(event, "details.html?id=0007");
+            openNewTab(event, "details.html?id=0008");
         });
 
         let NaosControllerMore = $("#NaoControllerMore");
         NaosControllerMore.on("click", function(event) {
-            location.href = 'details.html?id=0008';
+            location.href = 'details.html?id=0009';
         });
 
         NaosControllerMore.on("mousedown", function(event) {
-            openNewTab(event, "details.html?id=0008");
+            openNewTab(event, "details.html?id=0009");
         });
     }
 
