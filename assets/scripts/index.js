@@ -94,6 +94,7 @@ window.onload = function () {
                 $('.projects-mobile-show-more').fadeIn(500);
 
                 $(this).text('Weniger anzeigen');
+                $(this).blur();
             } else {
                 $('.projects-mobile-show-more').fadeOut(500);
 
@@ -101,6 +102,7 @@ window.onload = function () {
                 target.scrollIntoView({ behavior: "smooth" });
 
                 $(this).text('Mehr anzeigen');
+                $(this).blur();
             }
 
             projectShowMore = !projectShowMore;

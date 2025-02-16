@@ -29,7 +29,7 @@ window.onload = function () {
             title: "Ausbildung Anwendungsentwicklung",
             header: "Dreijährige Ausbildung als Fachinformatiker für Anwendungsentwicklung – Praxisnahe Ausbildung bei der StepAhead GmbH",
             content: "<p>Während meiner <strong>Ausbildung zum Fachinformatiker für Anwendungsentwicklung</strong> bei der <strong>StepAhead GmbH</strong> konnte ich die <strong>Grundlagen der Softwareentwicklung</strong> erlernen und praktische Erfahrungen sammeln. Zu Beginn der Ausbildung lag der Fokus auf den grundlegenden <strong>Programmiersprachen</strong> und <strong>Entwicklungstechniken</strong>, die für den Einstieg in die Softwarewelt notwendig sind. Schnell konnte ich mein Wissen in realen <strong>Projekten</strong> anwenden und mit den ersten eigenen <strong>Codezeilen</strong> erste Erfolge erzielen. <br><br> Nach dem ersten Jahr trat ich einem <strong>agilen Entwicklungsteam</strong> bei, das an der <strong>Webanwendung mySteps</strong> arbeitete. Die Software ermöglicht es Nutzern, <strong>Geschäftsprozesse</strong> direkt über den <strong>Browser</strong> zu steuern, ohne zusätzliche Software installieren zu müssen. In diesem Projekt war ich hauptsächlich mit der <strong>Frontend-Entwicklung</strong> beschäftigt und arbeitete mit <strong>Technologien</strong> wie <strong>HTML</strong>, <strong>CSS</strong> und <strong>JavaScript</strong>. Besonders wertvoll war für mich die enge Zusammenarbeit im <strong>Team</strong> und die Möglichkeit, in einem <strong>agilen Umfeld</strong> mit wöchentlichen <strong>Sprints</strong> zu arbeiten. <br><br> Die Ausbildung bei <strong>StepAhead</strong> ermöglichte es mir, sowohl meine <strong>technischen Fähigkeiten</strong> weiter auszubauen als auch meine <strong>Kommunikationsfähigkeiten</strong> zu verbessern. Durch den direkten Austausch mit <strong>Kollegen</strong> und <strong>Kunden</strong> konnte ich lernen, wie wichtig <strong>Teamarbeit</strong> und effektive <strong>Kommunikation</strong> für den Erfolg eines Projekts sind. Diese drei Jahre haben mich nicht nur fachlich, sondern auch persönlich enorm weitergebracht.</p>",
-            imageSource: "./assets/images/details/stepahead-logo.png"
+            imageSource: "./assets/images/details/stepahead-cloud.png"
         },
         "0006": {
             title: "Realschulabschluss",
@@ -94,7 +94,17 @@ window.onload = function () {
         observer.observe(image);
     }
 
+    function setImageFullscreen(){
+        const imgElement = document.querySelector('img[data-bs-toggle="modal"]');
+        const modalImage = document.getElementById('modalImage');
+
+        imgElement.addEventListener('click', function() {
+        modalImage.src = imgElement.src;
+        });
+    }
+
     showDetailPost();
+    setImageFullscreen();
 
     flyIn('.header-fly-in-top');
     flyIn('.titel-fly-in-bottom');

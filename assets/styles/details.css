@@ -195,6 +195,15 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
+.modal-content {
+    border-radius: 0px;
+    border: 3px solid #ff5100;
+}
+
+.modal-body {
+    padding: 0;
+}
+
 @media (min-width: 993px) and (min-height: 690px) {
     .detail-container {
         min-height: calc(100vh - 111px);
