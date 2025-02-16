@@ -525,6 +525,10 @@ nav a:hover {
     padding: 20px;
 }
 
+.modal-canvas {
+    margin-top: 30px;
+}
+
 .modal-footer {
     padding: 15px;
 }
