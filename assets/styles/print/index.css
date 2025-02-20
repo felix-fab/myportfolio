@@ -1,0 +1,41 @@
+@media print {
+    #navigation {
+        display: none;
+    }
+
+    .second-header{
+        color: black;
+    }
+
+    .header {
+        color: black;
+    }
+
+    .header-description {
+        color: black;
+    }
+
+    .portfolio {
+        color: #ff5100;
+    }
+
+    .time-header {
+        color: black;
+    }
+
+    .form-label {
+        color: black;
+    }
+
+    .form-control {
+        border-color: black;
+    }
+
+    .projects-mobile-show-more {
+        display: block;
+    }
+
+    #footer {
+        display: none;
+    }
+}
