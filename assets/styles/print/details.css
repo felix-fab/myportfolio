@@ -1,0 +1,17 @@
+@media print {
+    #navigation {
+        display: none;
+    }
+
+    .detail-header {
+        color: black;
+    }
+
+    #detail-content p {
+        color: black;
+    }
+
+    #footer {
+        display: none;
+    }
+}
