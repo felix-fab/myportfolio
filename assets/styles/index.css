@@ -538,6 +538,22 @@ nav a:hover {
     height: 120px;
 }
 
+.toast-container {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1050;
+}
+
+.toast-item{
+    background-color: red;
+    color: white;
+}
+
+.toast-link{
+    color: whitesmoke;
+}
+
 @media (max-width: 768px) {
     .footer-logo-container {
         position: static;

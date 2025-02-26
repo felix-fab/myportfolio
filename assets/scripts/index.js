@@ -231,13 +231,20 @@ window.onload = function () {
                         const modal = document.getElementById('successModal');
                         modal.style.display = 'flex';
                     } else {
-                        console.log('FAILED...', error);
+                        var toastEl = document.getElementById('errorMessage');
+                        var toast = new bootstrap.Toast(toastEl);
+                        toast.show();
+
+                        console.log('Fehler: ' + JSON.stringify(data));
                     }
                 })
-                .catch(error => console.error("Fehler:", error));
+                .catch(error => {
+                    var toastEl = document.getElementById('errorMessage');
+                    var toast = new bootstrap.Toast(toastEl);
+                    toast.show();
 
-            const modal = document.getElementById('successModal');
-            modal.style.display = 'flex';
+                    console.error("Fehler: ", error)
+                });
         });
 
         document.getElementById('dialogOk').addEventListener('click', function (event) {
