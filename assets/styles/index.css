@@ -533,6 +533,11 @@ nav a:hover {
     padding: 15px;
 }
 
+.successModal-animation {
+    width: 120px; 
+    height: 120px;
+}
+
 @media (max-width: 768px) {
     .footer-logo-container {
         position: static;
