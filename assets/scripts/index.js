@@ -218,7 +218,7 @@ window.onload = function () {
                 message
             };
 
-            /*fetch("https://default-api-manager.felixfab.de/send-contact-email", {
+            fetch("https://default-api-manager.felixfab.de/send-contact-email", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(templateParams),
@@ -235,8 +235,6 @@ window.onload = function () {
                     }
                 })
                 .catch(error => console.error("Fehler:", error));
-
-                */
 
             const modal = document.getElementById('successModal');
             modal.style.display = 'flex';
