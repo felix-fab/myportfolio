@@ -187,6 +187,23 @@ nav a:hover {
     margin-bottom: 60px;
 }
 
+#detail-more-information{
+    display: none;
+}
+
+#detail-more-information p {
+    width: auto;
+}
+
+.detail-link{
+    color: #ff5100;
+}
+
+#detail-source {
+    margin-left: 5px;
+    color: #ff5100;
+}
+
 .hidden {
     visibility: hidden;
 }

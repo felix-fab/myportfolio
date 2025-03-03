@@ -392,6 +392,10 @@ body {
     right: 25px;
 }
 
+.navbar-toggler:focus {
+    color: #f4510c;
+}
+
 .nav-about-me {
     min-width: 120px;
 }
