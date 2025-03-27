@@ -15,9 +15,13 @@ body {
     color: #ff5100;
 }
 
+a {
+    color: #ff621a;
+}
+
 a:active {
     color: darkgray;
 }
 a:visited {
-    color:darkgray;
+    color:#ff621a;
 }

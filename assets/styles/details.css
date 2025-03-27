@@ -199,6 +199,10 @@ nav a:hover {
     color: #ff5100;
 }
 
+.detail-link {
+    color: #ff5100;
+}
+
 #detail-source {
     margin-left: 5px;
     color: #ff5100;

@@ -195,6 +195,15 @@ window.onload = function () {
         NaosControllerMore.on("mousedown", function(event) {
             openNewTab(event, "details.html?id=0009");
         });
+
+        let DarkAnimationsMore = $("#DarkAnimationsMore");
+        DarkAnimationsMore.on("click", function(event) {
+            location.href = 'details.html?id=0010';
+        });
+
+        DarkAnimationsMore.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0010");
+        });
     }
 
     function setFormularSendEvent() {
