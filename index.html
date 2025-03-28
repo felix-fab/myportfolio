@@ -16,6 +16,40 @@
 
   <title>Portfolio Felix Wiegand</title>
 
+
+  <!-- Google Search-->
+  <meta name="description" content="Portfolio eines erfahrenen Anwendungsentwicklers mit Fokus auf moderne Softwarelösungen, Webentwicklung und innovative Apps.">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Felix Wiegand",
+      "jobTitle": "Anwendungsentwickler",
+      "description": "Portfolio eines erfahrenen Anwendungsentwicklers mit Fokus auf moderne Softwarelösungen, Webentwicklung und innovative Apps.",
+      "url": "https://felixfab.de",
+      "image": "https://www.felixfab.de/images/logo.webp",
+      "sameAs": [
+        "https://github.com/felix-fab",
+        "www.linkedin.com/in/felix-wiegand-b0928b299",
+        "https://www.instagram.com/_felixfab_/"
+      ],
+      "knowsAbout": ["Webentwicklung", "App-Entwicklung", "Softwarearchitektur", "Backend & Frontend"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Step Ahead GmbH"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Konrad-Zuse-Schule Hünfeld"
+      },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Fachinformatiker für Anwendungsentwicklung"
+      }
+    }
+    </script>
+
   <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/vendor/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="./assets/scripts/slick/slick.css" />
@@ -77,7 +111,7 @@
     </div>
   </nav>
 
-  <div id="home" class="first-content">
+  <section id="home" class="first-content">
     <div class="main-content">
       <div class="container">
         <div class="row">
@@ -110,25 +144,25 @@
           </div>
           <div class="home-image col">
             <div class="image-container">
-              <image class="home-fly-in-right image" src="./assets/images/introduce-me.webp"></image>
+              <image class="home-fly-in-right image" src="./assets/images/introduce-me.webp" alt="Bild um mich vorzustellen"></image>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <div class="page-divider-container">
     <div class="page-divider"></div>
   </div>
 
-  <div id="about-me" class="second-content">
+  <section id="about-me" class="second-content">
     <div class="main-content">
       <div class="container">
         <div class="row">
           <div class="about-me-image col">
             <div class="image-container">
-              <image class="about-me-fly-in-right image" src="./assets/images/about-me.webp"></image>
+              <image class="about-me-fly-in-right image" src="./assets/images/about-me.webp" alt="Bild um mich vorzustellen"></image>
             </div>
           </div>
           <div class="col">
@@ -143,13 +177,13 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <div class="page-divider-container">
     <div class="page-divider"></div>
   </div>
 
-  <div id="references" class="second-content">
+  <section id="references" class="second-content">
     <div class="main-content-block">
       <div class="references-fly-in-title block-header header">Meine <span class="orange-text">Referenzen</span>
       </div>
@@ -248,13 +282,13 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <div class="page-divider-container">
     <div class="page-divider"></div>
   </div>
 
-  <div id="projects" class="second-content">
+  <section id="projects" class="second-content">
     <div class="main-content-block">
       <div class="projects-fly-in-title block-header header">Letzte <span class="orange-text">Projekte</span></div>
       <div class="projects-fly-in-content content-container">
@@ -262,7 +296,7 @@
           <div class="row g-4">
             <div class="col-12 col-md-6 col-lg-4">
               <div class="project-image-container image-container">
-                <img src="./assets/images/projects/wohnpilot.webp" loading="lazy" class="project-image">
+                <img src="./assets/images/projects/wohnpilot.webp" loading="lazy" class="project-image" alt="Bild vom Projekt">
                 <div class="overlay">
                   <h3 class="project-more-header">WohnPilot</h3>
                   <p class="project-more-description">Für mehr Details hier klicken:</p>
@@ -272,7 +306,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
               <div class="project-image-container image-container">
-                <img src="./assets/images/projects/myportfolio.webp" loading="lazy" class="project-image">
+                <img src="./assets/images/projects/myportfolio.webp" loading="lazy" class="project-image" alt="Bild vom Projekt">
                 <div class="overlay">
                   <h3 class="project-more-header">Portfolio Webseite</h3>
                   <p class="project-more-description">Für mehr Details hier klicken:</p>
@@ -282,7 +316,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
               <div class="project-image-container image-container">
-                <img src="./assets/images/projects/nao-controller.webp" loading="lazy" class="project-image">
+                <img src="./assets/images/projects/nao-controller.webp" loading="lazy" class="project-image" alt="Bild vom Projekt">
                 <div class="overlay">
                   <h3 class="project-more-header">Nao Controller</h3>
                   <p class="project-more-description">Für mehr Details hier klicken:</p>
@@ -292,7 +326,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4 projects-mobile-show-more">
               <div class="project-image-container image-container">
-                <img src="./assets/images/projects/dark-animations-studio.webp" loading="lazy" class="project-image">
+                <img src="./assets/images/projects/dark-animations-studio.webp" loading="lazy" class="project-image" alt="Bild vom Projekt">
                 <div class="overlay">
                   <h3 class="project-more-header">Dark Animations Studio</h3>
                   <p class="project-more-description">Für mehr Details hier klicken:</p>
@@ -333,13 +367,13 @@
         <button id="project-show-more" class="btn portfolio">Mehr anzeigen</button>
       </div>
     </div>
-  </div>
+  </section>
 
   <div class="page-divider-container">
     <div class="page-divider"></div>
   </div>
 
-  <div id="contact-me" class="second-content">
+  <section id="contact-me" class="second-content">
     <div class="main-content-block">
       <div class="contact-me-fly-in-title block-header header">Kontaktiere <span class="orange-text">Mich</span></div>
       <div class="contact-me-fly-in-content content-container">
@@ -397,7 +431,7 @@
         </form>
       </div>
     </div>
-  </div>
+  </section>
 
   <div id="successModal" class="modal">
     <div class="modal-dialog">
