@@ -53,11 +53,18 @@
         "name": "Fachinformatiker für Anwendungsentwicklung",
         "description": "Ein Fachinformatiker für Anwendungsentwicklung entwickelt und programmiert Softwarelösungen für Unternehmen.",
         "estimatedSalary": {
-          "@type": "QuantitativeValue",
-          "value": 38000,
-          "unitText": "YEAR",
-          "currency": "EUR"
-        },
+          "@type": "MonetaryAmountDistribution",
+          "name": "base",
+          "currency": "EUR",
+          "duration": "P1Y",
+          "minValue": 36000,
+          "maxValue": 50000,
+          "median": 40000
+        }
+        "occupationLocation": {
+          "@type": "City", 
+          "name": "Hünfeld, Hessen, Deutschland"
+        }
         "occupationLocation": {
           "@type": "AdministrativeArea",
           "name": "Deutschland"
