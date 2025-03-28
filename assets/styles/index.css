@@ -284,6 +284,7 @@ body {
 .project-more-header {
     font-size: 30px;
     font-weight: bold;
+    text-align: center;
 }
 
 .project-more-description {
