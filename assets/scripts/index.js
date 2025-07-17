@@ -201,12 +201,12 @@ window.onload = function () {
             openNewTab(event, "details.html?id=0009");
         });
 
-        let NaosControllerMore = $("#NaoControllerMore");
-        NaosControllerMore.on("click", function(event) {
-            location.href = 'details.html?id=00010';
+        let NaoControllerMore = $("#NaoControllerMore");
+        NaoControllerMore.on("click", function(event) {
+            location.href = 'details.html?id=0010';
         });
 
-        NaosControllerMore.on("mousedown", function(event) {
+        NaoControllerMore.on("mousedown", function(event) {
             openNewTab(event, "details.html?id=00010");
         });
 
