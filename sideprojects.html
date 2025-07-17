@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline';
+        font-src 'self';
+        img-src 'self' data:;
+        connect-src 'self' https://default-api-manager.felixfab.de;
+    ">
+
+    <title>Portfolio Felix Wiegand</title>
+
+    <link href="./assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/scripts/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/scripts/slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <link rel="stylesheet" href="./assets/styles/sideprojects.css">
+    <link rel="stylesheet" href="./assets/styles/print/index.css" media="print">
+
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="FW Portfolio" />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navigation" class="navbar-background navbar navbar-expand-lg">
+        <div class="navbar-container container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/images/logo.webp" loading="lazy" alt="Logo" width="120" height="50"
+                    class="d-inline-block align-text-top">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav custom-nav mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link notSelected" href="./index.html">Startseite</a>
+                    </li>
+                    <li class="nav-about-me nav-item">
+                        <a class="nav-link notSelected" href="./index.html#about-me">Über mich</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link notSelected" href="./index.html#references">Referenzen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link currentSelected" aria-current="page" href="#">Freie Arbeiten</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link notSelected" href="./index.html#projects">Projekte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link notSelected" href="./index.html#contact-me">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main style="text-align: center; margin-top: 25px; margin-bottom: 25px;">
+        <div style="margin-top: 60px; margin-bottom: 60px;">
+            <h1 style="color: #fe5100; font-size: 3rem;">Meine freien Arbeiten</h1>
+            <p style="color: #ffff; font-size: 1.2rem;">Explore our range of professional animation services designed to
+                bring your vision to life</p>
+        </div>
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <div class="projects-container">
+                <!-- Sidebar mit Arbeiten -->
+                <div class="sidebar">
+                    <div class="work-item" onclick="showWork(0)">
+                        <div class="work-icon">
+                            <i data-lucide="camera"></i>
+                            <div>
+                                <div class="work-title">Projekt Eins</div>
+                                <div class="work-subtitle">Fotografie & Schatten</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-item" onclick="showWork(1)">
+                        <div class="work-icon">
+                            <i data-lucide="palette"></i>
+                            <div>
+                                <div class="work-title">Projekt Zwei</div>
+                                <div class="work-subtitle">Illustration & Raster</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weitere Projekte kannst du hier hinzufügen -->
+                </div>
+
+                <!-- Detailansicht -->
+                <div class="content" id="workDetail">
+                    <div class="work-detail">
+                        <h1 style="color: #ffff;">Wähle eine Arbeit aus</h1>
+                        <p style="color: #ffff;">Klicke auf eines der Projekte auf der linken Seite, um mehr Details zu sehen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer id="footer" class="footer-container text-light py-4 mt-auto">
+        <div class="container position-relative">
+            <div class="footer-logo-container">
+                <img src="./assets/images/logo.webp" loading="lazy" alt="Logo" class="footer-logo">
+            </div>
+
+            <div class="footer-content">
+                <nav class="nav justify-content-center mb-4">
+                    <a href="#" class="nav-link text-light">Startseite</a>
+                    <a href="#about-me" class="nav-link text-light">Über mich</a>
+                    <a href="#references" class="nav-link text-light">Referenzen</a>
+                    <a href="#projects" class="nav-link text-light">Projekte</a>
+                    <a href="#contact-me" class="nav-link text-light">Kontakt</a>
+                </nav>
+
+                <p class="mb-4">© 2025 Felix Wiegand</p>
+                <div>
+                    <a href="./datenschutz.html" class="text-light text-decoration-none me-3">Datenschutz</a>
+                    <a href="./impressum.html" class="text-light text-decoration-none">Impressum</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="./assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/vendor/jquery/jquery-migrate.min.js"></script>
+
+    <script type="text/javascript" src="./assets/scripts/slick/slick.min.js"></script>
+
+    <script language="javascript" type="text/javascript" src="./assets/scripts/sideprojects.js"></script>
+</body>
+
+</html>
