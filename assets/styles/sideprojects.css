@@ -8,6 +8,36 @@
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
+.main-container {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.main-title-container {
+    margin-top: 60px;
+}
+
+.main-title-container h1{
+    color: #fe5100;
+    font-size: 3rem;
+}
+
+.main-title-container p {
+    color: #ffff;
+    font-size: 1.2rem;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.main-content-containter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    margin-top: 60px;
+}
+
 .sidebar {
     width: 40%;
     background-color: #333333;

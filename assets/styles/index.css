@@ -87,6 +87,7 @@ body {
 
 .header-container {
     display: block;
+    max-width: 100%;
 }
 
 .header {
@@ -121,12 +122,16 @@ body {
     margin-right: 9px;
 }
 
+.home-button-container {
+    display: flex;
+}
+
 .typewriter {
     color: #ff5100;
     border-right: 2px solid #ff5100;
-    white-space: nowrap;
     overflow: hidden;
     content: ' ';
+    word-break: break-word;
 }
 
 .actions {
