@@ -147,6 +147,18 @@
     }
 }
 
+@media (max-width: 440px) {
+    .work-detail h1 {
+        font-size: 2rem;
+        word-break: normal;
+    }
+
+    .work-title {
+        font-size: 1.2rem;
+        word-break: normal;
+    }
+}
+
 @keyframes fadeScaleIn {
     from {
         opacity: 0;
