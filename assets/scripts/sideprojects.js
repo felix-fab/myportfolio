@@ -1,25 +1,48 @@
-const works = [
-    {
-        title: "Projekt Eins",
-        image: "https://via.placeholder.com/900x500?text=Projekt+1",
-        description: "Ein Fotoprojekt, das mit Architektur, Licht und Schatten spielt. Ziel war es, Formen in der Stadt visuell neu zu interpretieren."
-    },
-    {
-        title: "Projekt Zwei",
-        image: "https://via.placeholder.com/900x500?text=Projekt+2",
-        description: "Ein experimentelles Editorial-Design für ein fiktives Kunstmagazin. Fokus lag auf mutiger Typografie und dynamischen Layouts."
-    }
-];
+const works = ['detail-website', 'detail-software', 'detail-tests', 'detail-individuals'];
 
-function showWork(index) {
-    const work = works[index];
-    const detail = document.getElementById("workDetail");
+function showWork(index, init = false) {
+  const work = works[index];
+  const all = document.querySelectorAll('.work-detail');
 
-    detail.innerHTML = `
-      <div class="work-detail">
-        <img src="${work.image}" alt="${work.title}">
-        <h1>${work.title}</h1>
-        <p>${work.description}</p>
-      </div>
-    `;
+  all.forEach(el => {
+    el.classList.remove('show-detail');
+  });
+
+  const next = document.getElementById(work);
+  next.classList.add('show-detail');
+
+  const workItems = document.querySelectorAll('.work-item');
+  workItems.forEach(element => {
+    element.classList.remove('selected');
+  })
+
+  workItems[index].classList.add('selected')
+
+  if (!init && window.innerWidth <= 1092) {
+    document.getElementById('workDetail').scrollIntoView({ behavior: 'smooth' });
+  }
 }
+
+function goToContact() {
+  location.href = './index.html#contact-me';
+}
+
+function flyIn(selector) {
+  const image = document.querySelector(selector);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        image.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(image);
+}
+
+showWork(0, true);
+
+flyIn('.work-fly-in-title');
+flyIn('.work-fly-in-content');
