@@ -1,5 +1,5 @@
 window.onload = function () {
-    const texts = ["Innovativer Entwickler", "Web & Software Coder", "Lösungsfinder", "Agiler Teamplayer", "Tech-Begeisterter"];
+    const texts = ["Innovativer Entwickler", "Web & Software Engineer", "Lösungsarchitekt", "Agiler Teamplayer", "Tech-Begeisterter", "UX-Treiber mit Blick fürs Frontend", "Systemarchitekt aus Leidenschaft"];
     const typingSpeed = 200;
     const deletingSpeed = 100;
     const delayBetweenTexts = 2000;
@@ -111,6 +111,11 @@ window.onload = function () {
 
     function setMoreButtonAction() {
 
+        $('#mySideprojects').click(function () {
+            location.href = './sideprojects.html';
+
+        });
+
         $('#myPortfolio').click(function () {
             location.href = '#references';
         });
@@ -198,11 +203,11 @@ window.onload = function () {
 
         let NaoControllerMore = $("#NaoControllerMore");
         NaoControllerMore.on("click", function(event) {
-            location.href = 'details.html?id=00010';
+            location.href = 'details.html?id=0010';
         });
 
         NaoControllerMore.on("mousedown", function(event) {
-            openNewTab(event, "details.html?id=0010");
+            openNewTab(event, "details.html?id=00010");
         });
 
         let DarkAnimationsMore = $("#DarkAnimationsMore");

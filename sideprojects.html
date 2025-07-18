@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline';
+        font-src 'self';
+        img-src 'self' data:;
+        connect-src 'self' https://default-api-manager.felixfab.de;
+    ">
+
+    <title>Portfolio Felix Wiegand</title>
+
+    <!-- Google Search-->
+    <meta name="description"
+        content="Portfolio eines erfahrenen Anwendungsentwicklers mit Fokus auf moderne Softwarelösungen, Webentwicklung und innovative Apps.">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Felix Wiegand",
+            "jobTitle": "Anwendungsentwickler",
+            "url": "https://felixfab.de/sideprojects.html",
+            "image": "https://www.felixfab.de/images/logo.webp",
+            "description": "Freie Arbeiten und Side Projects von Felix Wiegand – individuelle Webentwicklung, Projektarbeit und Softwarelösungen.",
+            "sameAs": [
+                "https://github.com/felix-fab",
+                "https://www.linkedin.com/in/felix-wiegand-b0928b299",
+                "https://www.instagram.com/_felixfab_/"
+            ],
+            "knowsAbout": [
+                "Webentwicklung",
+                "Side Projects",
+                "Softwareentwicklung",
+                "Projektarbeit",
+                "Softwaretests"
+            ],
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Step Ahead GmbH"
+            },
+            "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Konrad-Zuse-Schule Hünfeld"
+            },
+            "hasOccupation": {
+                "@type": "Occupation",
+                "name": "Fachinformatiker für Anwendungsentwicklung",
+                "description": "Ein Fachinformatiker für Anwendungsentwicklung entwickelt und programmiert Softwarelösungen für Unternehmen.",
+                "estimatedSalary": {
+                "@type": "MonetaryAmountDistribution",
+                "currency": "EUR",
+                "duration": "P1Y",
+                "minValue": 36000,
+                "maxValue": 50000,
+                "median": 40000
+                },
+                "occupationLocation": {
+                "@type": "City",
+                "name": "Hünfeld, Hessen, Deutschland"
+                }
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://felixfab.de",
+                "name": "Portfolio von Felix Wiegand",
+                "description": "Erfahren Sie mehr über Felix Wiegand – Anwendungsentwickler mit Fokus auf Webentwicklung, Software und individuelle Projekte."
+            }
+        }
+    </script>
+
+    <link href="./assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/scripts/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/scripts/slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <link rel="stylesheet" href="./assets/styles/sideprojects.css">
+    <link rel="stylesheet" href="./assets/styles/print/index.css" media="print">
+
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="FW Portfolio" />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+</head>
+
+<body>
+    <nav id="navigation" class="navbar-background navbar navbar-expand-lg">
+        <div class="navbar-container container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/images/logo.webp" loading="lazy" alt="Logo" width="120" height="50"
+                    class="d-inline-block align-text-top">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav custom-nav mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link notSelected" href="./index.html">Startseite</a>
+                    </li>
+                    <li class="nav-about-me nav-item">
+                        <a class="nav-link notSelected" href="./index.html#about-me">Über mich</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link notSelected" href="./index.html#references">Referenzen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link currentSelected" aria-current="page" href="#">Freie Arbeiten</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link notSelected" href="./index.html#projects">Projekte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link notSelected" href="./index.html#contact-me">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <div class="main-title-container work-fly-in-title">
+            <h1>Meine freien Arbeiten</h1>
+            <p>Ich biete vielfältige,
+                professionelle Digitalprojekte – von modernen Websites bis hin zu individuellen Softwarelösungen.</p>
+        </div>
+        <div class="main-content-containter work-fly-in-content">
+            <div class="projects-container">
+                <div class="sidebar">
+
+                    <div class="work-item" onclick="showWork(0)">
+                        <div class="work-icon">
+                            <span class="project-icon material-symbols-outlined">
+                                add_ad
+                            </span>
+                            <div>
+                                <div class="work-title">Modernen Webauftritt erstellen</div>
+                                <div class="work-subtitle">Ich entwickle moderne, professionelle Websites speziell für
+                                    kleine Unternehmen.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-item" onclick="showWork(1)">
+                        <div class="work-icon">
+                            <span class="project-icon material-symbols-outlined">
+                                code
+                            </span>
+                            <div>
+                                <div class="work-title">Projekt Entwicklung</div>
+                                <div class="work-subtitle">Ich entwickle moderne, effiziente Software – entweder im
+                                    Rahmen bestehender Projekte oder als komplette Neuentwicklung.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-item" onclick="showWork(2)">
+                        <div class="work-icon">
+                            <span class="project-icon material-symbols-outlined">
+                                experiment
+                            </span>
+                            <div>
+                                <div class="work-title">Software Tests</div>
+                                <div class="work-subtitle">Ich teste bestehende Software gezielt auf Fehler,
+                                    Schwachstellen und Sicherheitslücken.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-item" onclick="showWork(3)">
+                        <div class="work-icon">
+                            <span class="project-icon material-symbols-outlined">
+                                instant_mix
+                            </span>
+                            <div>
+                                <div class="work-title">Individuelle Anforderungen</div>
+                                <div class="work-subtitle">Ich übernehme zudem individuelle Aufträge, die meinen
+                                    Kompetenzen und Interessen entsprechen.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content" id="workDetail">
+                    <div id="detail-website" class="work-detail visible">
+                        <section>
+                            <h1>Professionelle Webentwicklung für kleine Unternehmen</h1>
+
+                            <h4>Individuelles Design & Markenpräsenz</h4>
+                            <p>Ich entwickle moderne und professionelle Websites, die gezielt auf die Bedürfnisse
+                                kleiner Unternehmen abgestimmt sind. Dabei lege ich großen Wert auf ein ansprechendes
+                                Design, das Ihre Marke wirkungsvoll präsentiert und Vertrauen bei Ihren Kunden schafft.
+                            </p>
+
+                            <h4>Benutzerfreundlichkeit & Responsivität</h4>
+                            <p>Ein besonderes Augenmerk gilt der Benutzerfreundlichkeit: Die Websites sind übersichtlich
+                                gestaltet und bieten eine intuitive Navigation, sodass Ihre Kunden schnell die
+                                gewünschten Informationen finden. Außerdem werden alle Seiten responsiv umgesetzt, um
+                                eine optimale Darstellung auf Smartphones, Tablets und Desktop-PCs zu gewährleisten.
+                            </p>
+
+                            <h4>Technische Umsetzung & SEO</h4>
+                            <p>Technisch sorge ich für schnelle Ladezeiten und eine saubere Umsetzung aktueller
+                                Webstandards. Zudem berücksichtige ich wichtige Grundlagen der Suchmaschinenoptimierung
+                                (SEO), damit Ihre Website besser gefunden wird und somit mehr potenzielle Kunden
+                                erreicht.
+                            </p>
+
+                            <h4>Individuelle Planung & Preisgestaltung</h4>
+                            <p>Jedes Projekt wird individuell geplant und realisiert. Die Preise variieren je nach
+                                Umfang, Designanforderungen und gewünschten Funktionen, weshalb ich vorab immer eine
+                                persönliche Beratung anbiete, um gemeinsam die beste Lösung zu finden.
+                            </p>
+
+                            <h4>Kontakt & Beratung</h4>
+                            <p>Wenn Sie eine maßgeschneiderte Website wünschen, die Ihr kleines Unternehmen
+                                professionell im Netz präsentiert und langfristig zum Erfolg beiträgt, freue ich mich
+                                auf Ihre Kontaktaufnahme.
+                            </p>
+
+                            <button class="btn portfolio" onclick="goToContact()">Hier Kontaktieren</button>
+                        </section>
+                    </div>
+                    <div id="detail-software" class="work-detail">
+                        <section>
+                            <h1>Professionelle Projektentwicklung für individuelle Softwarelösungen</h1>
+
+                            <h4>Unterstützung bestehender Projekte</h4>
+                            <p>Ich arbeite aktiv an bestehenden Softwareprojekten mit, um Funktionen zu erweitern,
+                                Fehler zu beheben und die Performance zu verbessern. So bleibt Ihre Software stets
+                                aktuell und effizient.</p>
+
+                            <h4>Entwicklung neuer Software</h4>
+                            <p>Darüber hinaus entwickle ich maßgeschneiderte Softwarelösungen, die genau auf Ihre
+                                Anforderungen zugeschnitten sind. Von der Konzeption bis zur Umsetzung begleite ich
+                                Sie professionell bei der Realisierung neuer Projekte.</p>
+
+                            <h4>Agile & transparente Zusammenarbeit</h4>
+                            <p>Ich setze auf eine agile Arbeitsweise mit regelmäßigen Abstimmungen, damit Sie
+                                jederzeit den Überblick über den Fortschritt behalten und aktiv Einfluss nehmen
+                                können.</p>
+
+                            <h4>Flexible Planung & individuelle Preise</h4>
+                            <p>Jedes Projekt ist einzigartig, daher variieren Aufwand und Kosten je nach Komplexität
+                                und Umfang. Gerne berate ich Sie persönlich, um eine passende Lösung mit
+                                transparenten Konditionen zu finden.</p>
+
+                            <h4>Kontakt & Beratung</h4>
+                            <p>Wenn Sie professionelle Unterstützung bei der Projektentwicklung suchen, freue ich
+                                mich auf Ihre Kontaktaufnahme für ein unverbindliches Beratungsgespräch.</p>
+
+                            <button class="btn portfolio" onclick="goToContact()">Hier Kontaktieren</button>
+                        </section>
+                    </div>
+                    <div id="detail-tests" class="work-detail">
+                        <section>
+                            <h1>Professionelle Software Tests für sichere und fehlerfreie Anwendungen</h1>
+
+                            <h4>Fehlererkennung & Qualitätssicherung</h4>
+                            <p>Ich teste bestehende Software systematisch auf Fehler und Bugs, um die Stabilität und
+                                Zuverlässigkeit Ihrer Anwendungen sicherzustellen.</p>
+
+                            <h4>Sicherheitsüberprüfung & Schwachstellenanalyse</h4>
+                            <p>Ein Schwerpunkt liegt auf der Identifikation von Sicherheitslücken, damit Ihre Software
+                                vor Angriffen und Datenverlust geschützt ist.</p>
+
+                            <h4>Umfassende Testmethoden</h4>
+                            <p>Dabei nutze ich verschiedene Testverfahren, wie manuelle und automatisierte Tests, um
+                                alle Aspekte Ihrer Software gründlich zu prüfen.</p>
+
+                            <h4>Individuelle Planung & transparente Beratung</h4>
+                            <p>Jedes Testprojekt wird individuell abgestimmt. Umfang und Aufwand variieren je nach
+                                Software und Anforderungen, daher berate ich Sie gerne persönlich.</p>
+
+                            <h4>Kontakt & Zusammenarbeit</h4>
+                            <p>Wenn Sie Ihre Software sicherer und fehlerfrei machen möchten, freue ich mich auf Ihre
+                                Kontaktaufnahme für ein unverbindliches Gespräch.</p>
+
+                            <button class="btn portfolio" onclick="goToContact()">Hier Kontaktieren</button>
+                        </section>
+                    </div>
+                    <div id="detail-individuals" class="work-detail">
+                        <section>
+                            <h1>Maßgeschneiderte Lösungen für individuelle Anforderungen</h1>
+
+                            <h4>Flexible Projektannahme</h4>
+                            <p>Ich übernehme individuelle Aufträge, die meinen Kompetenzen und Interessen entsprechen,
+                                und biete passgenaue Lösungen für Ihre speziellen Wünsche.</p>
+
+                            <h4>Persönliche Beratung & Zusammenarbeit</h4>
+                            <p>Gemeinsam klären wir Ihre Anforderungen und entwickeln einen klaren Plan, um Ihr Projekt
+                                erfolgreich umzusetzen.</p>
+
+                            <h4>Qualität & Zuverlässigkeit</h4>
+                            <p>Dabei lege ich großen Wert auf hohe Qualität und eine transparente, zuverlässige
+                                Arbeitsweise.</p>
+
+                            <h4>Preisgestaltung & Flexibilität</h4>
+                            <p>Die Preise variieren je nach Projektumfang und Anforderungen, weshalb ich eine
+                                individuelle Beratung anbiete, um die beste Lösung für Sie zu finden.</p>
+
+                            <h4>Kontakt & Angebot</h4>
+                            <p>Wenn Sie einen individuellen Auftrag haben, der zu meinen Fähigkeiten passt, freue ich
+                                mich auf Ihre Kontaktaufnahme.</p>
+
+                            <button class="btn portfolio" onclick="goToContact()">Hier Kontaktieren</button>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-container text-light py-4 mt-auto">
+        <div class="container position-relative">
+            <div class="footer-logo-container">
+                <img src="./assets/images/logo.webp" loading="lazy" alt="Logo" class="footer-logo">
+            </div>
+
+            <div class="footer-content">
+                <nav class="nav justify-content-center mb-4">
+                    <a href="./index.html" class="nav-link text-light">Startseite</a>
+                    <a href="./index.html#about-me" class="nav-link text-light">Über mich</a>
+                    <a href="./index.html#references" class="nav-link text-light">Referenzen</a>
+                    <a href="#" class="nav-link text-light">Freie Arbeiten</a>
+                    <a href="./index.html#projects" class="nav-link text-light">Projekte</a>
+                    <a href="./index.html#contact-me" class="nav-link text-light">Kontakt</a>
+                </nav>
+
+                <p class="mb-4">© 2025 Felix Wiegand</p>
+                <div>
+                    <a href="./datenschutz.html" class="text-light text-decoration-none me-3">Datenschutz</a>
+                    <a href="./impressum.html" class="text-light text-decoration-none">Impressum</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="./assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/vendor/jquery/jquery-migrate.min.js"></script>
+
+    <script language="javascript" type="text/javascript" src="./assets/scripts/sideprojects.js"></script>
+</body>
+
+</html>
