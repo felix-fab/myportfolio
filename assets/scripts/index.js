@@ -218,6 +218,69 @@ window.onload = function () {
         DarkAnimationsMore.on("mousedown", function(event) {
             openNewTab(event, "details.html?id=0011");
         });
+
+        let CrownUpDetailsBtn = $("#CrownUpDetailsBtn");
+        CrownUpDetailsBtn.on("click", function(event) {
+            location.href = 'details.html?id=0007';
+        });
+
+        CrownUpDetailsBtn.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0007");
+        });
+
+        let WohnPilotDetailsBtn = $("#WohnPilotDetailsBtn");
+        WohnPilotDetailsBtn.on("click", function(event) {
+            location.href = 'details.html?id=0008';
+        });
+
+        WohnPilotDetailsBtn.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0008");
+        });
+
+        let PortfolioDetailsBtn = $("#PortfolioDetailsBtn");
+        PortfolioDetailsBtn.on("click", function(event) {
+            location.href = 'details.html?id=0009';
+        });
+
+        PortfolioDetailsBtn.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0009");
+        });
+
+        let NaoControllerDetailsBtn = $("#NaoControllerDetailsBtn");
+        NaoControllerDetailsBtn.on("click", function(event) {
+            location.href = 'details.html?id=0010';
+        });
+
+        NaoControllerDetailsBtn.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0010");
+        });
+
+        let DarkAnimationsDetailsBtn = $("#DarkAnimationsDetailsBtn");
+        DarkAnimationsDetailsBtn.on("click", function(event) {
+            location.href = 'details.html?id=0011';
+        });
+
+        DarkAnimationsDetailsBtn.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0011");
+        });
+
+        let UpthoughsMore = $("#upthoughsMore");
+        UpthoughsMore.on("click", function(event) {
+            location.href = 'details.html?id=0012';
+        });
+
+        UpthoughsMore.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0012");
+        });
+
+        let HomelabMore = $("#homelabMore");
+        HomelabMore.on("click", function(event) {
+            location.href = 'details.html?id=0013';
+        });
+
+        HomelabMore.on("mousedown", function(event) {
+            openNewTab(event, "details.html?id=0013");
+        });
     }
 
     function setFormularSendEvent() {
@@ -390,11 +453,17 @@ window.onload = function () {
     flyIn('.projects-fly-in-title');
     flyIn('.projects-fly-in-content');
 
+    flyIn('.featured-projects-fly-in-title');
+    flyIn('.featured-projects-fly-in-content');
+
     flyIn('.contact-me-fly-in-title');
     flyIn('.contact-me-fly-in-content-name-left');
     flyIn('.contact-me-fly-in-content-name-right');
     flyIn('.contact-me-fly-in-content-data-left');
     flyIn('.contact-me-fly-in-content-data-right');
     flyIn('.contact-me-fly-in-content-bottom');
+
+    flyIn('.featured-projects-fly-in-title');
+    flyIn('.featured-projects-fly-in-content');
 };
 

@@ -224,7 +224,7 @@ body {
 }
 
 .project-image {
-    border-radius: 30px;
+    border-radius: 25px;
     width: 100%;
     height: auto;
 }
@@ -347,7 +347,7 @@ body {
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    border-radius: 30px;
+    border-radius: 25px;
 }
 
 .image-container {
@@ -400,6 +400,82 @@ body {
     opacity: 1;
 }
 
+/* Featured project showcase */
+.project-showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    max-width: 1300px;
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    padding: 28px;
+    border-radius: 20px;
+    border: 1px solid #6f6f6f;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,81,0,0.15);
+    background: linear-gradient(135deg, rgba(255,81,0,0.12), rgba(255,255,255,0.06));
+}
+
+.project-card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.project-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-card-title {
+    color: white;
+    font-size: 1.9rem;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.project-card-desc {
+    color: #e6e6e6;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    line-height: 1.65;
+    opacity: 0.95;
+}
+
+.project-card-actions {
+    display: flex;
+    gap: 12px;
+}
+
+@media (max-width: 1140px) {
+    .project-showcase-container {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .project-card {
+        grid-template-columns: 1fr;
+    }
+}
+
 .slick-prev:hover {
     opacity: .75;
 }
@@ -449,6 +525,7 @@ body {
 
 .form-label {
     color: white;
+    margin-bottom: 0px;
 }
 
 .form-control {
