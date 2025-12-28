@@ -106,22 +106,30 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav custom-nav mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link currentSelected" aria-current="page" href="#">Startseite</a>
+            <a class="nav-link currentSelected" aria-current="page" href="#" data-i18n="nav.home">Startseite</a>
           </li>
           <li class="nav-about-me nav-item">
-            <a class="nav-link notSelected" href="#about-me">Über mich</a>
+            <a class="nav-link notSelected" href="#about-me" data-i18n="nav.about">Über mich</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link notSelected" href="#references">Referenzen</a>
+            <a class="nav-link notSelected" href="#references" data-i18n="nav.references">Referenzen</a>
           </li>
           <!--<li class="nav-item">
             <a class="nav-link notSelected" href="./sideprojects.html">Freie Arbeiten</a>
           </li>-->
           <li class="nav-item">
-            <a class="nav-link notSelected" href="#featured-projects">Projekte</a>
+            <a class="nav-link notSelected" href="#featured-projects" data-i18n="nav.projects">Projekte</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link notSelected" href="#contact-me">Kontakt</a>
+            <a class="nav-link notSelected" href="#contact-me" data-i18n="nav.contact">Kontakt</a>
+          </li>
+          <li class="nav-item language-switcher">
+            <button class="lang-btn active" data-lang="de" title="Deutsch">
+              <img src="./assets/images/flags/de.svg" alt="Deutsch" class="flag-icon">
+            </button>
+            <button class="lang-btn" data-lang="en" title="English">
+              <img src="./assets/images/flags/gb.svg" alt="English" class="flag-icon">
+            </button>
           </li>
         </ul>
       </div>
@@ -134,13 +142,13 @@
         <div class="row">
           <div class="col">
             <div class="home-fly-in-left header-container">
-              <h2 class="second-header">Hey, hier bin ich</h2>
+              <h2 class="second-header" data-i18n="home.greeting">Hey, hier bin ich</h2>
               <h1 class="home-fly-in-title header">Felix Wiegand</h1>
               <h2 class="second-header">
-                <span class="before-typewriter">Ich bin</span><wbr><span class="typewriter"></span>
+                <span class="before-typewriter" data-i18n="home.iam">Ich bin</span><wbr><span class="typewriter"></span>
               </h2>
-              <p class="home-fly-in-description header-description">Lass uns gemeinsam smarte Lösungen entwickeln und
-                die digitale Welt gestalten – mit Felix Wiegand.</p>
+              <p class="home-fly-in-description header-description" data-i18n="home.description">Lass uns gemeinsam
+                smarte Lösungen entwickeln und die digitale Welt gestalten – mit Felix Wiegand.</p>
               <div class="actions">
                 <div class="action-item">
                   <a href="https://www.linkedin.com/in/felix-wiegand-b0928b299/" class="orange-text fa fa-linkedin"></a>
@@ -157,7 +165,7 @@
               </div>
               <div class="home-button-container">
                 <!--<button id="mySideprojects" class="btn sideprojects">Freie Arbeiten</button>-->
-                <button id="myPortfolio" class="btn portfolio">Mein Portfolio</button>
+                <button id="myPortfolio" class="btn portfolio" data-i18n="home.portfolio">Mein Portfolio</button>
               </div>
             </div>
           </div>
@@ -188,14 +196,17 @@
           </div>
           <div class="col">
             <div class="about-me-info-container">
-              <div class="about-me-fly-in-title header">Über <span class="orange-text">Mich</span></div>
+              <div class="about-me-fly-in-title header"><span data-i18n="about.title">Über</span> <span
+                  class="orange-text" data-i18n="about.titleHighlight">Mich</span></div>
               <div class="about-me-info-description about-me-fly-in-left">
-                <div class="second-header">Anwendungsentwickler</div>
-                <div class="header-description">Schon früh habe ich meine Leidenschaft für Softwareentwicklung entdeckt
+                <div class="second-header" data-i18n="about.subtitle">Anwendungsentwickler</div>
+                <div class="header-description" data-i18n="about.description">Schon früh habe ich meine Leidenschaft für
+                  Softwareentwicklung entdeckt
                   und mich seit der 8. Klasse intensiv mit Programmierung beschäftigt. Nach meinem Realschulabschluss
                   habe ich eine Ausbildung als Fachinformatiker für Anwendungsentwicklung bei der StepAhead GmbH
                   absolviert. Dort konnte ich in einem agilen Team an der Webanwendung <strong>mySteps</strong>
-                  mitarbeiten und wertvolle Erfahrungen in HTML, CSS und JavaScript sammeln. Aktuell studiere ich Angewandte Informatik an der Hochschule in Mainz. 
+                  mitarbeiten und wertvolle Erfahrungen in HTML, CSS und JavaScript sammeln. Aktuell studiere ich
+                  Angewandte Informatik an der Hochschule in Mainz.
                   Nebenbei arbeite ich als Werkstudent weiterhin als DevOps Entwickler. <strong>Mein Ziel:</strong>
                   Innovative Softwarelösungen entwickeln und mich stetig weiterentwickeln.</div>
               </div>
@@ -212,7 +223,8 @@
 
   <section id="references" class="second-content">
     <div class="main-content-block">
-      <div class="references-fly-in-title block-header header">Meine <span class="orange-text">Referenzen</span>
+      <div class="references-fly-in-title block-header header"><span data-i18n="references.title">Meine</span> <span
+          class="orange-text" data-i18n="references.titleHighlight">Referenzen</span>
       </div>
       <div class="reference-container content-container">
         <div class="references-fly-in-content references-carousel">
@@ -221,16 +233,17 @@
               <span class="reference-icon material-symbols-outlined">
                 import_contacts
               </span>
-              <div class="second-header">Studium</div>
+              <div class="second-header" data-i18n="references.ref1.title">Studium</div>
 
               <div class="time-header-container">
-                <span class="time-header">Aktuell</span>
+                <span class="time-header" data-i18n="references.ref1.time">Aktuell</span>
               </div>
 
-              <div class="header-description">Nach meinem Fachabitur an der Konrad-Zuse-Schule in Hünfeld habe ich das Studium
+              <div class="header-description" data-i18n="references.ref1.desc">Nach meinem Fachabitur an der
+                Konrad-Zuse-Schule in Hünfeld habe ich das Studium
                 Angewandte Informatik an der Hochschule Mainz begonnen. Dort möchte ich mein Wissen vertiefen und
                 innovative Softwarelösungen entwickeln.</div>
-              <button id="StudiumMore" class="btn portfolio">Mehr ansehen</button>
+              <button id="StudiumMore" class="btn portfolio" data-i18n="references.moreBtn">Mehr ansehen</button>
             </div>
           </div>
           <div class="reference">
@@ -238,16 +251,17 @@
               <span class="reference-icon material-symbols-outlined">
                 people
               </span>
-              <div class="second-header">DevOps Entwickler</div>
+              <div class="second-header" data-i18n="references.ref2.title">DevOps Entwickler</div>
 
               <div class="time-header-container">
-                <span class="time-header">StepAhead GmbH</span>
+                <span class="time-header" data-i18n="references.ref2.time">StepAhead GmbH</span>
               </div>
 
-              <div class="header-description">Nach meinem Fachabitur war ich bei der StepAhead GmbH als Entwickler tätig
+              <div class="header-description" data-i18n="references.ref2.desc">Nach meinem Fachabitur war ich bei der
+                StepAhead GmbH als Entwickler tätig
                 und arbeitete im agilen Team an der Konzeption und Umsetzung neuer Funktionen im MMS-Modul sowie an
                 Erweiterungen der Plattform der Webanwendung mySteps.</div>
-              <button id="DevOpsDeveloper" class="btn portfolio">Mehr ansehen</button>
+              <button id="DevOpsDeveloper" class="btn portfolio" data-i18n="references.moreBtn">Mehr ansehen</button>
             </div>
           </div>
           <div class="reference">
@@ -255,16 +269,17 @@
               <span class="reference-icon material-symbols-outlined">
                 support_agent
               </span>
-              <div class="second-header">2nd Level Supporter</div>
+              <div class="second-header" data-i18n="references.ref3.title">2nd Level Supporter</div>
 
               <div class="time-header-container">
-                <span class="time-header">StepAhead GmbH</span>
+                <span class="time-header" data-i18n="references.ref3.time">StepAhead GmbH</span>
               </div>
 
-              <div class="header-description">Als Second-Level Supporter bei der StepAhead GmbH unterstütze ich die
+              <div class="header-description" data-i18n="references.ref3.desc">Als Second-Level Supporter bei der
+                StepAhead GmbH unterstütze ich die
                 Nutzer der mySteps-Plattform bei technischen Problemen. Dabei analysiere ich Fehler, finde Lösungen und
                 sorge für eine reibungslose Nutzung der Software.</div>
-              <button id="SecondLevelSupport" class="btn portfolio">Mehr ansehen</button>
+              <button id="SecondLevelSupport" class="btn portfolio" data-i18n="references.moreBtn">Mehr ansehen</button>
             </div>
           </div>
           <div class="reference">
@@ -272,16 +287,17 @@
               <span class="reference-icon material-symbols-outlined">
                 people
               </span>
-              <div class="second-header">Web Entwickler</div>
+              <div class="second-header" data-i18n="references.ref4.title">Web Entwickler</div>
 
               <div class="time-header-container">
-                <span class="time-header">StepAhead GmbH</span>
+                <span class="time-header" data-i18n="references.ref4.time">StepAhead GmbH</span>
               </div>
 
-              <div class="header-description">Nach meiner Ausbildung arbeitete ich als Entwickler bei der StepAhead
+              <div class="header-description" data-i18n="references.ref4.desc">Nach meiner Ausbildung arbeitete ich als
+                Entwickler bei der StepAhead
                 GmbH, wo ich im agilen Team an der Webanwendung mySteps mitwirkte und praktische Erfahrungen in der
                 Softwareentwicklung sammelte.</div>
-              <button id="WebDeveloper" class="btn portfolio">Mehr ansehen</button>
+              <button id="WebDeveloper" class="btn portfolio" data-i18n="references.moreBtn">Mehr ansehen</button>
             </div>
           </div>
           <div class="reference">
@@ -289,16 +305,17 @@
               <span class="reference-icon material-symbols-outlined">
                 school
               </span>
-              <div class="second-header">Fachabitur</div>
+              <div class="second-header" data-i18n="references.ref5.title">Fachabitur</div>
 
               <div class="time-header-container">
-                <span class="time-header">2025 - 2024</span>
+                <span class="time-header" data-i18n="references.ref5.time">2025 - 2024</span>
               </div>
 
-              <div class="header-description">Ich absolviere mein Fachabitur an der Konrad-Zuse-Schule in Hünfeld, um
+              <div class="header-description" data-i18n="references.ref5.desc">Ich absolviere mein Fachabitur an der
+                Konrad-Zuse-Schule in Hünfeld, um
                 meine Kenntnisse in IT und allgemeinen Fächern zu vertiefen. Diese Ausbildung bereitet mich bestens auf
                 mein geplantes Informatikstudium an der Hochschule Mainz vor.</div>
-              <button id="FOSMore" class="btn portfolio">Mehr ansehen</button>
+              <button id="FOSMore" class="btn portfolio" data-i18n="references.moreBtn">Mehr ansehen</button>
             </div>
           </div>
           <div class="reference">
@@ -306,16 +323,17 @@
               <span class="reference-icon material-symbols-outlined">
                 code
               </span>
-              <div class="second-header">Ausbildung</div>
+              <div class="second-header" data-i18n="references.ref6.title">Ausbildung</div>
 
               <div class="time-header-container">
-                <span class="time-header">2024 - 2021</span>
+                <span class="time-header" data-i18n="references.ref6.time">2024 - 2021</span>
               </div>
 
-              <div class="header-description">Während meiner Ausbildung zum Fachinformatiker für Anwendungsentwicklung
+              <div class="header-description" data-i18n="references.ref6.desc">Während meiner Ausbildung zum
+                Fachinformatiker für Anwendungsentwicklung
                 bei der StepAhead GmbH lernte ich die Grundlagen der Softwareentwicklung und arbeitete in einem agilen
                 Team an der Webanwendung mySteps mit.</div>
-              <button id="EducationMore" class="btn portfolio">Mehr ansehen</button>
+              <button id="EducationMore" class="btn portfolio" data-i18n="references.moreBtn">Mehr ansehen</button>
             </div>
           </div>
         </div>
@@ -329,34 +347,35 @@
 
   <section id="featured-projects" class="second-content">
     <div class="main-content-block">
-      <div class="featured-projects-fly-in-title block-header header">Aktuelle <span class="orange-text">Projekte</span>
-      </div>
+      <div class="featured-projects-fly-in-title block-header header"><span data-i18n="featured.title">Aktuelle</span>
+        <span class="orange-text" data-i18n="featured.titleHighlight">Projekte</span></div>
       <div style="display: flex; justify-content: center; align-items: center; height: calc(100% - 172px)">
         <div class="featured-projects-fly-in-content project-showcase-container">
-
           <div class="project-card">
             <div class="project-card-image">
-              <img src="./assets/images/projects/upthoughts.webp" loading="lazy" alt="Bild vom CrownUp">
+              <img src="./assets/images/projects/upthoughts.webp" loading="lazy" alt="Bild vom UpThoughts">
             </div>
             <div class="project-card-content">
-              <h3 class="project-card-title">UpThoughts</h3>
-              <p class="project-card-desc">Eine Mobile App, mit der du wichtige Gedanken und Zitate speichern und dich regelmäßig daran erinnern lassen kannst.</p>
+              <h3 class="project-card-title" data-i18n="featured.upthoughts.title">UpThoughts</h3>
+              <p class="project-card-desc" data-i18n="featured.upthoughts.desc">Eine Mobile App, mit der du wichtige
+                Gedanken und Zitate speichern und dich regelmäßig daran erinnern lassen kannst.</p>
               <div class="project-card-actions">
-                <button id="upthoughsMore" class="btn portfolio">Details ansehen</button>
+                <button id="upthoughsMore" class="btn portfolio" data-i18n="featured.detailsBtn">Details
+                  ansehen</button>
               </div>
             </div>
           </div>
 
           <div class="project-card">
             <div class="project-card-image">
-              <img src="./assets/images/projects/homelab.webp" loading="lazy" alt="Bild vom WohnPilot">
+              <img src="./assets/images/projects/homelab.webp" loading="lazy" alt="Bild vom Homelab">
             </div>
             <div class="project-card-content">
-              <h3 class="project-card-title">Homelab</h3>
-              <p class="project-card-desc">Ich betreibe einen Home-Server mit einem PC, einer NAS und einer USV, auf dem mehrere Dienste und Programme zuverlässig laufen.
-              </p>
+              <h3 class="project-card-title" data-i18n="featured.homelab.title">Homelab</h3>
+              <p class="project-card-desc" data-i18n="featured.homelab.desc">Ich betreibe einen Home-Server mit einem
+                PC, einer NAS und einer USV, auf dem mehrere Dienste und Programme zuverlässig laufen.</p>
               <div class="project-card-actions">
-                <button id="homelabMore" class="btn portfolio">Details ansehen</button>
+                <button id="HomeLabMore" class="btn portfolio" data-i18n="featured.detailsBtn">Details ansehen</button>
               </div>
             </div>
           </div>
@@ -371,7 +390,8 @@
 
   <section id="projects" class="second-content">
     <div class="main-content-block">
-      <div class="projects-fly-in-title block-header header">Letzte <span class="orange-text">Projekte</span></div>
+      <div class="projects-fly-in-title block-header header"><span data-i18n="projects.title">Letzte</span> <span
+          class="orange-text" data-i18n="projects.titleHighlight">Projekte</span></div>
       <div class="projects-fly-in-content content-container">
         <div class="container">
           <div class="row g-4">
@@ -381,7 +401,8 @@
                   alt="Bild vom WohnPilot">
                 <div class="overlay">
                   <h3 class="project-more-header">WohnPilot</h3>
-                  <p class="project-more-description">Für mehr Details hier klicken:</p>
+                  <p class="project-more-description" data-i18n="projects.moreDetails">Für mehr Details hier klicken:
+                  </p>
                   <a target="_blank" id="WohnPilotMore"
                     class="project-more-icon material-symbols-outlined">open_in_new</a>
                 </div>
@@ -440,11 +461,12 @@
               <div class="project-image-container image-container">
                 <video autoplay loop muted playsinline class="project-image">
                   <source src="./assets/images/projects/coming-soon.mp4" type="video/mp4">
-                  Dein Browser unterstützt kein HTML5-Video.
+                  <span data-i18n="projects.videoError">Dein Browser unterstützt kein HTML5-Video.</span>
                 </video>
                 <div class="overlay">
-                  <h3 class="project-more-header">Coming Soon</h3>
-                  <p class="project-more-description">Für mehr Details hier klicken:</p>
+                  <h3 class="project-more-header" data-i18n="projects.comingSoon">Coming Soon</h3>
+                  <p class="project-more-description" data-i18n="projects.moreDetails">Für mehr Details hier klicken:
+                  </p>
                   <a target="_blank" class="project-more-icon material-symbols-outlined">open_in_new</a>
                 </div>
               </div>
@@ -453,7 +475,7 @@
         </div>
       </div>
       <div class="project-show-more-container">
-        <button id="project-show-more" class="btn portfolio">Mehr anzeigen</button>
+        <button id="project-show-more" class="btn portfolio" data-i18n="projects.showMore">Mehr anzeigen</button>
       </div>
     </div>
   </section>
@@ -464,19 +486,20 @@
 
   <section id="contact-me" class="second-content">
     <div class="main-content-block">
-      <div class="contact-me-fly-in-title block-header header">Kontaktiere <span class="orange-text">Mich</span></div>
+      <div class="contact-me-fly-in-title block-header header"><span data-i18n="contact.title">Kontaktiere</span> <span
+          class="orange-text" data-i18n="contact.titleHighlight">Mich</span></div>
       <div class="contact-me-fly-in-content content-container">
         <form id="contact-me">
           <div class="row">
             <div class="contact-me-fly-in-content-name-left col-md-6">
               <div class="contact-input-container mb-3">
-                <label for="contact-firstName" class="form-label">Vorname</label>
+                <label for="contact-firstName" class="form-label" data-i18n="contact.firstName">Vorname</label>
                 <input type="text" class="form-control" id="contact-firstName" placeholder="Vorname" required>
               </div>
             </div>
             <div class="contact-me-fly-in-content-name-right col-md-6">
               <div class="contact-input-container mb-3">
-                <label for="contact-lastName" class="form-label">Nachname</label>
+                <label for="contact-lastName" class="form-label" data-i18n="contact.lastName">Nachname</label>
                 <input type="text" class="form-control" id="contact-lastName" placeholder="Nachname" required>
               </div>
             </div>
@@ -484,13 +507,13 @@
           <div class="row">
             <div class="contact-me-fly-in-content-data-left col-md-6">
               <div class="contact-input-container mb-3">
-                <label for="contact-email" class="form-label">E-Mail Addresse</label>
-                <input type="email" class="form-control" id="contact-email" placeholder="E-Mail Addresse" required>
+                <label for="contact-email" class="form-label" data-i18n="contact.email">E-Mail Adresse</label>
+                <input type="email" class="form-control" id="contact-email" placeholder="E-Mail Adresse" required>
               </div>
             </div>
             <div class="contact-me-fly-in-content-data-right col-md-6">
               <div class="contact-input-container mb-3">
-                <label for="contact-mobileNumber" class="form-label">Mobile Number</label>
+                <label for="contact-mobileNumber" class="form-label" data-i18n="contact.mobile">Mobile Number</label>
                 <input type="tel" class="form-control" id="contact-mobileNumber" placeholder="Mobile Number" required>
               </div>
             </div>
@@ -499,7 +522,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="contact-input-container mb-3">
-                  <label for="contact-subject" class="form-label">Betreff</label>
+                  <label for="contact-subject" class="form-label" data-i18n="contact.subject">Betreff</label>
                   <input type="text" class="form-control" id="contact-subject" placeholder="Betreff" required>
                 </div>
               </div>
@@ -526,7 +549,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Erfolg!</h4>
+          <h4 class="modal-title" data-i18n="modal.success">Erfolg!</h4>
         </div>
         <div>
           <!-- <canvas id="modal-canvas" class="modal-canvas" width="150" height="150"></canvas> -->
@@ -536,10 +559,11 @@
           </video>
         </div>
         <div class="modal-body">
-          <p>Deine Nachricht wurde erfolgreich gesendet. Ich melde mich schnellstmöglich bei dir!</p>
+          <p data-i18n="modal.successMessage">Deine Nachricht wurde erfolgreich gesendet. Ich melde mich
+            schnellstmöglich bei dir!</p>
         </div>
         <div class="modal-footer">
-          <button id="dialogOk" class="btn portfolio">OK</button>
+          <button id="dialogOk" class="btn portfolio" data-i18n="modal.ok">OK</button>
         </div>
       </div>
     </div>
@@ -550,8 +574,8 @@
       aria-atomic="true" data-bs-delay="3000">
       <div class="d-flex">
         <div class="toast-body">
-          Ein unbekannter Fehler ist aufgetreten.<br>Kontakt: <a href="mailto:info.felixfab@gmail.com"
-            class="toast-link">info.felixfab@gmail.com</a>
+          <span data-i18n="modal.errorMessage">Ein unbekannter Fehler ist aufgetreten.</span><br>Kontakt: <a
+            href="mailto:info.felixfab@gmail.com" class="toast-link">info.felixfab@gmail.com</a>
         </div>
         <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
           aria-label="Close"></button>
@@ -567,18 +591,19 @@
 
       <div class="footer-content">
         <nav class="nav justify-content-center mb-4">
-          <a href="#" class="nav-link text-light">Startseite</a>
-          <a href="#about-me" class="nav-link text-light">Über mich</a>
-          <a href="#references" class="nav-link text-light">Referenzen</a>
+          <a href="#" class="nav-link text-light" data-i18n="footer.home">Startseite</a>
+          <a href="#about-me" class="nav-link text-light" data-i18n="footer.about">Über mich</a>
+          <a href="#references" class="nav-link text-light" data-i18n="footer.references">Referenzen</a>
           <!--<a href="./sideprojects.html" class="nav-link text-light">Freie Arbeiten</a>-->
-          <a href="#projects" class="nav-link text-light">Projekte</a>
-          <a href="#contact-me" class="nav-link text-light">Kontakt</a>
+          <a href="#projects" class="nav-link text-light" data-i18n="footer.projects">Projekte</a>
+          <a href="#contact-me" class="nav-link text-light" data-i18n="footer.contact">Kontakt</a>
         </nav>
 
         <p class="mb-4">© 2025 Felix Wiegand</p>
         <div>
-          <a href="./datenschutz.html" class="text-light text-decoration-none me-3">Datenschutz</a>
-          <a href="./impressum.html" class="text-light text-decoration-none">Impressum</a>
+          <a href="./datenschutz.html" class="text-light text-decoration-none me-3"
+            data-i18n="footer.privacy">Datenschutz</a>
+          <a href="./impressum.html" class="text-light text-decoration-none" data-i18n="footer.imprint">Impressum</a>
         </div>
       </div>
     </div>
@@ -589,6 +614,7 @@
   <script type="text/javascript" src="./assets/vendor/jquery/jquery-migrate.min.js"></script>
 
   <script type="text/javascript" src="./assets/scripts/slick/slick.min.js"></script>
+  <script language="javascript" type="text/javascript" src="./assets/scripts/i18n.js"></script>
   <script language="javascript" type="text/javascript" src="./assets/scripts/index.js"></script>
 </body>
 

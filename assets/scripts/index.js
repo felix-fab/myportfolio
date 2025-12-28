@@ -1,5 +1,6 @@
 window.onload = function () {
-    const texts = ["Innovativer Entwickler", "Web & Software Engineer", "Lösungsarchitekt", "Agiler Teamplayer", "Tech-Begeisterter", "UX-Treiber mit Blick fürs Frontend", "Systemarchitekt aus Leidenschaft"];
+    const lang = localStorage.getItem('language') || 'de';
+    const texts = translations[lang].typewriter.texts;
     const typingSpeed = 200;
     const deletingSpeed = 100;
     const delayBetweenTexts = 2000;
@@ -38,6 +39,17 @@ window.onload = function () {
         const speed = isDeleting ? deletingSpeed : typingSpeed;
         setTimeout(typewriter, speed);
     }
+
+    // Create global typewriter instance for i18n updates
+    window.typewriterInstance = {
+        updateTexts: function(newTexts) {
+            texts.length = 0;
+            texts.push(...newTexts);
+            textIndex = 0;
+            charIndex = 0;
+            isDeleting = true;
+        }
+    };
 
     function flyIn(selector) {
         const image = document.querySelector(selector);
@@ -90,10 +102,15 @@ window.onload = function () {
 
     function setProjectShowMoreEvent() {
         $('#project-show-more').click(function () {
+            const lang = localStorage.getItem('language') || 'de';
+            const showMoreText = translations[lang].projects.showMore;
+            const showLessText = translations[lang].projects.showLess;
+            
             if (!projectShowMore) {
                 $('.projects-mobile-show-more').fadeIn(500);
 
-                $(this).text('Weniger anzeigen');
+                $(this).attr('data-i18n', 'projects.showLess');
+                $(this).text(showLessText);
                 $(this).blur();
             } else {
                 $('.projects-mobile-show-more').fadeOut(500);
@@ -101,7 +118,8 @@ window.onload = function () {
                 const target = document.getElementById("projects");
                 target.scrollIntoView({ behavior: "smooth" });
 
-                $(this).text('Mehr anzeigen');
+                $(this).attr('data-i18n', 'projects.showMore');
+                $(this).text(showMoreText);
                 $(this).blur();
             }
 
