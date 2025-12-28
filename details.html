@@ -11,6 +11,7 @@
   <title>Detailseite</title>
   <link href="./assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="./assets/styles/index.css">
   <link rel="stylesheet" href="./assets/styles/details.css">
   <link rel="stylesheet" href="./assets/styles/print/details.css" media="print">
 
@@ -40,19 +41,19 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav custom-nav mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link notSelected" aria-current="page" href="index.html#">Startseite</a>
+            <a class="nav-link notSelected" aria-current="page" href="index.html#" data-i18n="nav.home">Startseite</a>
           </li>
           <li class="nav-about-me nav-item">
-            <a class="nav-link notSelected" href="index.html#about-me">Über mich</a>
+            <a class="nav-link notSelected" href="index.html#about-me" data-i18n="nav.about">Über mich</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link notSelected" href="index.html#references">Referenzen</a>
+            <a class="nav-link notSelected" href="index.html#references" data-i18n="nav.references">Referenzen</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link notSelected" href="index.html#projects">Projekte</a>
+            <a class="nav-link notSelected" href="index.html#projects" data-i18n="nav.projects">Projekte</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link notSelected" href="index.html#contact-me">Kontakt</a>
+            <a class="nav-link notSelected" href="index.html#contact-me" data-i18n="nav.contact">Kontakt</a>
           </li>
           <li class="nav-item language-switcher">
             <button class="lang-btn active" data-lang="de" title="Deutsch">
@@ -70,7 +71,7 @@
   <div class="detail-container">
     <div class="container">
       <header class="header-section">
-        <h1 class="header-fly-in-top detail-header">Mehr Details zu</h1>
+        <h1 class="header-fly-in-top detail-header" data-i18n="details.detailsHeader">Mehr Details zu</h1>
       </header>
       <div class="header-row row">
         <div class="col-md-12 text-center">
@@ -93,10 +94,10 @@
   </div>
 
   <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content" style="border: 3px solid #ff5100">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
         <div class="modal-body">
-          <img id="modalImage" loading="lazy" src="" alt="Großes Bild" class="img-fluid w-100">
+          <img id="modalImage" loading="lazy" src="" alt="Großes Bild" class="img-fluid">
         </div>
       </div>
     </div>
@@ -110,17 +111,17 @@
 
       <div class="footer-content">
         <nav class="nav justify-content-center mb-4">
-          <a href="index.html#" class="nav-link text-light">Startseite</a>
-          <a href="index.html#about-me" class="nav-link text-light">Über mich</a>
-          <a href="index.html#references" class="nav-link text-light">Referenzen</a>
-          <a href="index.html#projects" class="nav-link text-light">Projekte</a>
-          <a href="index.html#contact-me" class="nav-link text-light">Kontakt</a>
+          <a href="index.html#" class="nav-link text-light" data-i18n="footer.home">Startseite</a>
+          <a href="index.html#about-me" class="nav-link text-light" data-i18n="footer.about">Über mich</a>
+          <a href="index.html#references" class="nav-link text-light" data-i18n="footer.references">Referenzen</a>
+          <a href="index.html#projects" class="nav-link text-light" data-i18n="footer.projects">Projekte</a>
+          <a href="index.html#contact-me" class="nav-link text-light" data-i18n="footer.contact">Kontakt</a>
         </nav>
 
         <p class="mb-4">© 2025 Felix Wiegand</p>
         <div>
-          <a href="./datenschutz.html" class="text-light text-decoration-none me-3">Datenschutz</a>
-          <a href="./impressum.html" class="text-light text-decoration-none">Impressum</a>
+          <a href="./datenschutz.html" class="text-light text-decoration-none me-3" data-i18n="footer.privacy">Datenschutz</a>
+          <a href="./impressum.html" class="text-light text-decoration-none" data-i18n="footer.imprint">Impressum</a>
         </div>
       </div>
     </div>

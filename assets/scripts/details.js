@@ -105,7 +105,7 @@ window.onload = function () {
         const modalImage = document.getElementById('modalImage');
 
         imgElement.addEventListener('click', function() {
-        modalImage.src = imgElement.src;
+            modalImage.src = imgElement.src;
         });
     }
 

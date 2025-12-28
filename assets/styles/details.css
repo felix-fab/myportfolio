@@ -216,13 +216,84 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
+.modal-dialog.modal-fullscreen {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .modal-content {
-    border-radius: 0px;
-    border: 3px solid #ff5100;
+    border-radius: 0;
+    border: none;
+    height: 100%;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding: 25px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1060;
+}
+
+.modal-header .btn-close {
+    font-size: 2rem;
+    opacity: 1;
+    background: #ff5100;
+    border-radius: 50%;
+    padding: 15px;
+    width: 55px;
+    height: 55px;
+    box-shadow: 0 4px 20px rgba(255, 81, 0, 0.6);
+    transition: all 0.3s ease;
+    filter: brightness(1);
+}
+
+.modal-header .btn-close:hover {
+    background: #ff6a2e;
+    transform: scale(1.15) rotate(90deg);
+    box-shadow: 0 6px 30px rgba(255, 81, 0, 0.8);
 }
 
 .modal-body {
     padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-body img {
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    filter: brightness(1) contrast(1);
+    border: 3px solid #ff5100;
+    border-radius: 12px;
+    box-shadow: 0 0 24px rgba(255, 81, 0, 0.35), 0 6px 30px rgba(0, 0, 0, 0.55);
+}
+
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.55);
 }
 
 @media (min-width: 993px) and (min-height: 690px) {

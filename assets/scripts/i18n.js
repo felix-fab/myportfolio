@@ -115,6 +115,7 @@ const translations = {
             ]
         },
         details: {
+            detailsHeader: 'Mehr Details zu',
             backLink: 'Zurück',
             moreInformation: 'Weitere Informationen',
             posts: {
@@ -303,6 +304,7 @@ const translations = {
             ]
         },
         details: {
+            detailsHeader: 'More Details about',
             backLink: 'Back',
             moreInformation: 'More Information',
             posts: {

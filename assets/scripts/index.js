@@ -1,6 +1,6 @@
 window.onload = function () {
     const lang = localStorage.getItem('language') || 'de';
-    const texts = translations[lang].typewriter.texts;
+    let texts = translations[lang].typewriter.texts;
     const typingSpeed = 200;
     const deletingSpeed = 100;
     const delayBetweenTexts = 2000;
@@ -11,9 +11,29 @@ window.onload = function () {
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
+    let typewriterTimeout = null;
 
     function typewriter() {
+        // Clear any existing timeout
+        if (typewriterTimeout) {
+            clearTimeout(typewriterTimeout);
+        }
+        
+        // Safety check: ensure texts array and current text exist
+        if (!texts || texts.length === 0 || textIndex >= texts.length) {
+            typewriterTimeout = setTimeout(typewriter, 100);
+            return;
+        }
+        
         const currentText = texts[textIndex];
+        
+        // Additional safety check for undefined text
+        if (!currentText) {
+            textIndex = 0;
+            typewriterTimeout = setTimeout(typewriter, 100);
+            return;
+        }
+        
         let visibleText;
 
         if (isDeleting) {
@@ -27,7 +47,11 @@ window.onload = function () {
         element.textContent = visibleText;
 
         if (!isDeleting && charIndex === currentText.length) {
-            setTimeout(() => (isDeleting = true), delayBetweenTexts);
+            typewriterTimeout = setTimeout(() => {
+                isDeleting = true;
+                typewriter();
+            }, delayBetweenTexts);
+            return;
         }
 
         if (isDeleting && charIndex < 0) {
@@ -37,17 +61,31 @@ window.onload = function () {
         }
 
         const speed = isDeleting ? deletingSpeed : typingSpeed;
-        setTimeout(typewriter, speed);
+        typewriterTimeout = setTimeout(typewriter, speed);
     }
 
     // Create global typewriter instance for i18n updates
     window.typewriterInstance = {
         updateTexts: function(newTexts) {
-            texts.length = 0;
-            texts.push(...newTexts);
+            if (!newTexts || newTexts.length === 0) return;
+            
+            // Clear any pending timeout
+            if (typewriterTimeout) {
+                clearTimeout(typewriterTimeout);
+                typewriterTimeout = null;
+            }
+            
+            // Update texts reference
+            texts = newTexts;
+            
+            // Reset state
             textIndex = 0;
             charIndex = 0;
-            isDeleting = true;
+            isDeleting = false;
+            
+            // Clear current text and restart immediately
+            element.textContent = '';
+            typewriter();
         }
     };
 
@@ -291,7 +329,7 @@ window.onload = function () {
             openNewTab(event, "details.html?id=0012");
         });
 
-        let HomelabMore = $("#homelabMore");
+        let HomelabMore = $("#HomeLabMore");
         HomelabMore.on("click", function(event) {
             location.href = 'details.html?id=0013';
         });
