@@ -37,11 +37,11 @@ window.onload = function () {
         let visibleText;
 
         if (isDeleting) {
-            visibleText = currentText.substring(0, charIndex) + (charIndex === 0 ? '' : ' ');
             charIndex--;
+            visibleText = currentText.substring(0, Math.max(0, charIndex));
         } else {
-            visibleText = currentText.substring(0, charIndex);
             charIndex++;
+            visibleText = currentText.substring(0, Math.min(currentText.length, charIndex));
         }
 
         element.textContent = visibleText;
