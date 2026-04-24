@@ -1,4 +1,36 @@
 window.onload = function () {
+    const csrfStorageKey = 'contactFormCsrfToken';
+
+    function generateCsrfToken() {
+        if (window.crypto && window.crypto.getRandomValues) {
+            const bytes = new Uint8Array(16);
+            window.crypto.getRandomValues(bytes);
+            return Array.from(bytes, function (byte) {
+                return byte.toString(16).padStart(2, '0');
+            }).join('');
+        }
+
+        return String(Date.now()) + String(Math.random()).slice(2);
+    }
+
+    function ensureCsrfToken() {
+        let csrfToken = sessionStorage.getItem(csrfStorageKey);
+
+        if (!csrfToken) {
+            csrfToken = generateCsrfToken();
+            sessionStorage.setItem(csrfStorageKey, csrfToken);
+        }
+
+        const csrfInput = document.getElementById('contact-csrf-token');
+        if (csrfInput) {
+            csrfInput.value = csrfToken;
+        }
+
+        return csrfToken;
+    }
+
+    ensureCsrfToken();
+
     const lang = localStorage.getItem('language') || 'de';
     let texts = translations[lang].typewriter.texts;
     const typingSpeed = 200;
@@ -343,6 +375,11 @@ window.onload = function () {
         document.getElementById('contact-me').addEventListener('submit', function (event) {
             event.preventDefault();
 
+            const csrfToken = ensureCsrfToken();
+            if (!csrfToken) {
+                return;
+            }
+
             var firstName = document.getElementById('contact-firstName').value;
             var lastName = document.getElementById('contact-lastName').value;
             var email = document.getElementById('contact-email').value;
@@ -357,12 +394,16 @@ window.onload = function () {
                 email,
                 mobileNumber,
                 subject,
-                message
+                message,
+                csrfToken
             };
 
             fetch("https://default-api-manager.felixfab.de/send-contact-email", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-Token": csrfToken
+                },
                 body: JSON.stringify(templateParams),
             })
                 .then(response => response.json())
