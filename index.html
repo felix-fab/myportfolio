@@ -11,10 +11,9 @@
     default-src 'self';
     base-uri 'self';
     form-action 'self';
-    frame-ancestors 'self';
     object-src 'none';
-    script-src 'self' 'unsafe-inline';
-    style-src 'self' 'unsafe-inline';
+    script-src 'self' 'sha256-+ZKNbote5m+8XMk0lgG53Gbwa/PBX5lwjxVeC8Se7E4=' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=';
+    style-src 'self';
     font-src 'self';
     img-src 'self' data:;
     connect-src 'self' https://default-api-manager.felixfab.de;
@@ -356,7 +355,7 @@
     <div class="main-content-block">
       <div class="featured-projects-fly-in-title block-header header"><span data-i18n="featured.title">Aktuelle</span>
         <span class="orange-text" data-i18n="featured.titleHighlight">Projekte</span></div>
-      <div style="display: flex; justify-content: center; align-items: center; height: calc(100% - 172px)">
+      <div class="featured-projects-center-wrap">
         <div class="featured-projects-fly-in-content project-showcase-container">
           <div class="project-card">
             <div class="project-card-image">
