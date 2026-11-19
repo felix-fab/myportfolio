@@ -401,8 +401,7 @@ window.onload = function () {
             fetch("https://api.felixfab.de/send-contact-email", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
-                    "X-CSRF-Token": csrfToken
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify(templateParams),
             })
