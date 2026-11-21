@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    base-uri 'self';
+    form-action 'self';
+    object-src 'none';
+    script-src 'self' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=';
+    style-src 'self';
+    font-src 'self';
+    img-src 'self' data:;
+    connect-src 'self';
+    upgrade-insecure-requests;
+  ">
+
+  <title>Portfolio Felix Wiegand - Seite nicht gefunden (404)</title>
+  <meta name="description"
+    content="Die angeforderte Seite wurde nicht gefunden. Zurück zur Startseite von Felix Wiegand.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link href="./assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles/index.css">
+  <link rel="stylesheet" href="./assets/styles/404.css">
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="FW Portfolio" />
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+</head>
+
+<body>
+  <nav id="navigation" class="navbar-background navbar navbar-expand-lg">
+    <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="index.html#">
+        <img src="./assets/images/logo.webp" alt="Logo" width="120" height="50" class="d-inline-block align-text-top">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav custom-nav mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link notSelected" href="index.html#" data-i18n="nav.home">Startseite</a>
+          </li>
+          <li class="nav-about-me nav-item">
+            <a class="nav-link notSelected" href="index.html#about-me" data-i18n="nav.about">Über mich</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notSelected" href="index.html#references" data-i18n="nav.references">Referenzen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notSelected" href="index.html#projects" data-i18n="nav.projects">Projekte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notSelected" href="index.html#contact-me" data-i18n="nav.contact">Kontakt</a>
+          </li>
+          <li class="nav-item language-switcher">
+            <button class="lang-btn active" data-lang="de" title="Deutsch">
+              <img src="./assets/images/flags/de.svg" alt="Deutsch" class="flag-icon">
+            </button>
+            <button class="lang-btn" data-lang="en" title="English">
+              <img src="./assets/images/flags/gb.svg" alt="English" class="flag-icon">
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="error-container">
+    <div class="container">
+      <div class="error-fly-in-top header-section">
+        <h1 class="error-code">404</h1>
+      </div>
+      <div class="titel-fly-in-bottom header-row row">
+        <div class="col-md-12 text-center">
+          <h2 class="error-title" data-i18n="404.title">Seite nicht gefunden</h2>
+        </div>
+      </div>
+      <div class="content-fly-in-bottom content-row row">
+        <div class="col-md-12 text-center">
+          <p class="error-description" data-i18n="404.description">Ups! Die Seite, die du suchst, wurde leider nicht
+            gefunden oder ist nicht mehr verfügbar. Kein Problem – lass dich einfach zurück zur Startseite führen.</p>
+          <a href="index.html#" class="btn portfolio error-button" data-i18n="404.backHome">Zur Startseite</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer" class="footer-container text-light py-4 mt-auto">
+    <div class="container position-relative">
+      <div class="footer-logo-container">
+        <img src="./assets/images/logo.webp" loading="lazy" alt="Logo" class="footer-logo">
+      </div>
+
+      <div class="footer-content">
+        <nav class="nav justify-content-center mb-4">
+          <a href="index.html#" class="nav-link text-light" data-i18n="footer.home">Startseite</a>
+          <a href="index.html#about-me" class="nav-link text-light" data-i18n="footer.about">Über mich</a>
+          <a href="index.html#references" class="nav-link text-light" data-i18n="footer.references">Referenzen</a>
+          <a href="index.html#projects" class="nav-link text-light" data-i18n="footer.projects">Projekte</a>
+          <a href="index.html#contact-me" class="nav-link text-light" data-i18n="footer.contact">Kontakt</a>
+        </nav>
+
+        <p class="mb-4">© 2025 Felix Wiegand</p>
+        <div>
+          <a href="./datenschutz.html" class="text-light text-decoration-none me-3"
+            data-i18n="footer.privacy">Datenschutz</a>
+          <a href="./impressum.html" class="text-light text-decoration-none" data-i18n="footer.imprint">Impressum</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="./assets/scripts/i18n.js"></script>
+  <script type="text/javascript" src="./assets/scripts/404.js"></script>
+</body>
+
+</html>

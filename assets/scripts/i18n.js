@@ -103,6 +103,11 @@ const translations = {
             privacy: 'Datenschutz',
             imprint: 'Impressum'
         },
+        "404": {
+            title: 'Seite nicht gefunden',
+            description: 'Ups! Die Seite, die du suchst, wurde leider nicht gefunden oder ist nicht mehr verfügbar. Kein Problem – lass dich einfach zurück zur Startseite führen.',
+            backHome: 'Zur Startseite'
+        },
         typewriter: {
             texts: [
                 'Innovativer Entwickler',
@@ -291,6 +296,11 @@ const translations = {
             contact: 'Contact',
             privacy: 'Privacy',
             imprint: 'Imprint'
+        },
+        "404": {
+            title: 'Page not found',
+            description: 'Oops! The page you are looking for could not be found or is no longer available. No problem – simply head back to the homepage.',
+            backHome: 'Back to homepage'
         },
         typewriter: {
             texts: [
